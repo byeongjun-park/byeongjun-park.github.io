@@ -38,13 +38,13 @@ layout: homepage
 
 * ### Conference Reviewer
 
-  - **VCIP** @ 2023
-  - **AAAI** @ 2021, 2022
-  - **ICIP** @ 2021, 2022
+  * **VCIP** @ 2023
+  * **AAAI** @ 2021, 2022
+  * **ICIP** @ 2021, 2022
 
 * ### Journal Reviewer
 
-  - **IET Computer Vision** @ 2023
+  * **IET Computer Vision** @ 2023
 
 ## Awards & Honors
 
