@@ -360,13 +360,11 @@ header {
   float:left;
   position:fixed;
   left: 50%;
-  transform: translateX(-330%);
+  transform: translateX(-300%);
   -webkit-font-smoothing:subpixel-antialiased;
   padding-top:4.0em;
   text-align:center
 }
-
-
 
 header ul {
   list-style:none;
@@ -436,6 +434,8 @@ header ul a strong {
 section {
   width:900px;
   float:right;
+  right: 50%;
+  transform: translateX(100%);
   padding-top:4.0em;
   padding-bottom:50px;
 }
