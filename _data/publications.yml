@@ -1,6 +1,6 @@
 main:
 
-  - title: 'Point-DynRF:' Point-based Dynamic Radiance Fields from a Monocular Video
+  - title: "Point-DynRF: Point-based Dynamic Radiance Fields from a Monocular Video"
     authors: <strong>Byeongjun Park</strong>, Changick Kim
     conference_short: WACV
     conference: IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</strong>, 2024.
