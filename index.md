@@ -36,16 +36,16 @@ layout: homepage
 
 ## Academic Services
 
-### Conference Reviewer
+* ### Conference Reviewer
 
-* **ICCV** @ 2023
-* **VCIP** @ 2023
-* **AAAI** @ 2021, 2022
-* **ICIP** @ 2021, 2022
+  * **ICCV** @ 2023
+  * **VCIP** @ 2023
+  * **AAAI** @ 2021, 2022
+  * **ICIP** @ 2021, 2022
 
-### Journal Reviewer
+* ### Journal Reviewer
 
-* **IET Computer Vision** @ 2023
+  * **IET Computer Vision** @ 2023
 
 ## Awards & Honors
 
