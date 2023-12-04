@@ -49,4 +49,6 @@ layout: homepage
 
 ## Awards & Honors
 
-* **National Science & Technology Scholarship** @ 2016, 2017, 2018
+* **Samsung Best Paper Award in Autumn Annual Conference on IEIE ($ 1,000)** @ Nov. 2021
+    * Jeongsoo Kim, **Byeongjun Park**, Seungju Cho, Myung-ae Choi, Jinyoung Park, Hyungsoo Seo, Changick Kim, "An Optical Flow Fusion Deep Learning Network using Trap Camera Image Dataset"
+* **National Science & Technology Scholarship** @ 2016, 2017, 2018 
