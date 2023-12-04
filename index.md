@@ -14,12 +14,12 @@ layout: homepage
 
 ## Research Interests
 
-- **Novel View Synthesis:** Single-Image view synthesis, Dynamic radiance fields
-- **Diffusion Models:** Diffusion models, One-Image-to-3D
+* **Novel View Synthesis:** Single-Image view synthesis, Dynamic radiance fields
+* **Diffusion Models:** Diffusion models, One-Image-to-3D
 
 ## News
 
-- **[Oct. 2023]** Our paper about Dynamic Radiance Fields is accepted to WACV 2024.
+* **[Oct. 2023]** Our paper about Dynamic Radiance Fields is accepted to WACV 2024.
 
 {% include_relative _includes/publications.md %}
 
