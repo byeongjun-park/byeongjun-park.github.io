@@ -10,7 +10,7 @@ layout: homepage
 
 ## Work Experience
 
-* **[Mar. 2018 ~ Aug. 2018]:** AI Research Intern **(Smart Factory)** @ Koh Young Technology
+* **[Mar. 2018 ~ Aug. 2018]:** AI Research Intern @ Koh Young Technology
 
 ## Research Interests
 
@@ -36,7 +36,7 @@ layout: homepage
 
 ## Academic Services
 
-#### Conference Reviewer
+### Conference Reviewer
 
 * IEEE/CVF International Conference on Computer Vision **(ICCV)** @ 2023
 * AAAI Conference on Artifical Intelligence **(AAAI)** @ 2021, 2022
