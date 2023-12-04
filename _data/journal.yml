@@ -1,0 +1,9 @@
+main:
+
+  - title: Bridging Implicit and Explicit Geometric Transformation for Single-Image View Synthesis
+    authors: <strong>Byeongjun Park*</strong>, Hyojun Go*, Changick Kim (*Equal Contribution)
+    conference_short: ArXiv
+    conference: Under Review in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
+    pdf: https://arxiv.org/pdf/2209.07105.pdf
+    OpenReview: https://openreview.net/forum?id=x4JZ3xX5mtv
+    image: ./assets/img/teaser_pami.png

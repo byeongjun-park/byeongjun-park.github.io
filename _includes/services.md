@@ -7,9 +7,9 @@
   <li><a href="https://aaai.org/conference/aaai/aaai-22//"><autocolor>AAAI Conference on Artificial Intelligence (AAAI), 2021-2022</autocolor></a></li>
 </ul>
 
-[//]: # (<h4 style="margin:0 10px 0;">Journal Reviewers</h4>)
+<h4 style="margin:0 10px 0;">Journal Reviewers</h4>
 
-[//]: # ()
-[//]: # (<ul style="margin:0 0 20px;">)
 
-[//]: # (</ul>)
+<ul style="margin:0 0 20px;">
+
+</ul>
