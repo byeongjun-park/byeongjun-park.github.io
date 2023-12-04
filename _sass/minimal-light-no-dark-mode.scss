@@ -286,6 +286,7 @@ header {
   width:232px;
   float:left;
   position:fixed;
+  left:10px;
   -webkit-font-smoothing:subpixel-antialiased;
   padding-top:4.0em;
   text-align:center
@@ -375,7 +376,6 @@ footer {
   float:left;
   position:fixed;
   bottom:30px;
-  left: 5px;
   -webkit-font-smoothing:subpixel-antialiased;
   text-align:center;
 }
