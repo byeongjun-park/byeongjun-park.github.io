@@ -1,7 +1,7 @@
 main:
 
   - title: "HarmonyView: Harmonizing Consistency and Diversity in One-Image-to-3D"
-    authors: Sangmin Woo*, <strong>Byeongjun Park*</strong>, Hyojun Go*, Jin-Young Kim*, Changick Kim (*Equal Contribution)
+    authors: Sangmin Woo*, <strong>Byeongjun Park*</strong>, Hyojun Go, Jin-Young Kim, Changick Kim (*Equal Contribution)
     conference_short: ArXiv
     conference: Under Review...
     image: ./assets/img/teaser_harmonyview.png
