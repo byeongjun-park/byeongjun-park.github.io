@@ -24,9 +24,9 @@ layout: homepage
 
 {% include_relative _includes/publications.md %}
 
-{% include_relative _includes/services.md %}
+## Patents
 
-{% include_relative _includes/patents.md %}
+* **[Sep. 2022]** Method and apparatus with scene flow estimation (US20220301190A1) [[link]](https://patents.google.com/patent/US20220301190A1/en)
 
 ## Projects
 
@@ -34,6 +34,11 @@ layout: homepage
 * **[Mar. 2023 ~ Apr. 2023]:** Institute for Security Convergence (ISC) - CAPTCHA Solving Techniques
 * **[Sep. 2020 ~ Feb. 2022]:** Ministry of Science and ICT (MSIT) - Digital ecology with AI
 * **[Aug. 2020 ~ Aug. 2021]:** Samsung Advanced Institude of Technology (SAIT) - Monocular Scene Flow estimation
+
+## Services
+
+* IEEE/CVF International Conference on Computer Vision **(ICCV)** @ 2023
+* AAAI Conference on Artifical Intelligence **(AAAI)** @ 2021, 2022
 
 ## Awards & Honors
 
