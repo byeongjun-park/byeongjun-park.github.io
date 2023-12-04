@@ -1,6 +1,6 @@
 <h2 id="publications" style="margin: 2px 0px -15px;">Publications</h2>
 
-<h3 style="margin:0 0px 0;">Conference</h3>
+### Conference
 
 <div class="publications">
 <ol class="bibliography">
@@ -56,7 +56,8 @@
 </ol>
 </div>
 
-<h3 style="margin:0 0px 0;">Journal</h3>
+### Journal
+
 
 <div class="publications">
 <ol class="bibliography">
