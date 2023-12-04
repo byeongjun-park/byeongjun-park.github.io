@@ -10,7 +10,7 @@ layout: homepage
 
 ## Work Experience
 
-* **[Mar. 2018 ~ Aug. 2018]** AI Research Intern @ Koh Young Technology
+* **[Mar. 2018 ~ Aug. 2018]:** AI Research Intern @ Koh Young Technology
 
 ## Research Interests
 
