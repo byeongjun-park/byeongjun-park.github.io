@@ -14,8 +14,7 @@ layout: homepage
 
 ## Projects
 
-* **[May. 2023 ~ Present]:** Institute for Security Convergence (ISC) - Precise landing technology for drones  
-* **[Aug. 2023 ~ Dec. 2023]:** Proposal Planning and Research - Comprehensive Maritime Surveillance and Search
+* **[May. 2023 ~ Present]:** SOOMVI - Precise landing technology for drones  
 * **[Mar. 2023 ~ Apr. 2023]:** Institute for Security Convergence (ISC) - A Study on CAPTCHA Solving Techniques to Discover its Vulnerabilities
 * **[Sep. 2020 ~ Feb. 2022]:** Ministry of Science and ICT (MSIT) - Anthropocene Study (digital ecology with AI)
 * **[Aug. 2020 ~ Aug. 2021]:** Samsung Advanced Institude of Technology (SAIT) - Monocular Scene Flow estimation

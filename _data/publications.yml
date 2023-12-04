@@ -1,16 +1,23 @@
 main:
 
+  - title: Denoising Task Routing for Diffusion Models
+    authors: <strong>Byeongjun Park*</strong>, Sangmin Woo*, Hyojun Go*, Jin-Young Kim*, Changick Kim
+    conference_short: Under Review
+    conference: Under Review...
+    pdf: https://arxiv.org/pdf/2310.07138.pdf
+    image: ./assets/img/teaser_iclr.png
+
   - title: "Point-DynRF: Point-based Dynamic Radiance Fields from a Monocular Video"
     authors: <strong>Byeongjun Park</strong>, Changick Kim
     conference_short: WACV
-    conference: IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</strong>, 2024.
+    conference: IEEE/CVF Winter Conference on Applications of Computer Vision <strong>(WACV)</strong>, 2024.
     pdf: https://arxiv.org/pdf/2310.09647.pdf
     image: ./assets/img/teaser_wacv.png
 
   - title: Bridging Implicit and Explicit Geometric Transformation for Single-Image View Synthesis
     authors: <strong>Byeongjun Park*</strong>, Hyojun Go*, Changick Kim (*Equal Contribution)
     conference_short: Under Review
-    conference: Under Review.
+    conference: Under Review...
     pdf: https://arxiv.org/pdf/2209.07105.pdf
 #    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
 #    page: https://class-il.mpi-inf.mpg.de/mnemonics/
