@@ -38,9 +38,15 @@ layout: homepage
 
 ### Conference Reviewer
 
-* IEEE/CVF International Conference on Computer Vision **(ICCV)** @ 2023
-* AAAI Conference on Artifical Intelligence **(AAAI)** @ 2021, 2022
+* **ICCV** @ 2023
+* **VCIP** @ 2023
+* **AAAI** @ 2021, 2022
+* **ICIP** @ 2021, 2022
+
+### Journal Reviewer
+
+* **IET Computer Vision** @ 2023
 
 ## Awards & Honors
 
-* **National Science & Technology Scholarship** (2016-2018)
+* **National Science & Technology Scholarship** @ 2016, 2017, 2018
