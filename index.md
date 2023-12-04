@@ -2,22 +2,38 @@
 layout: homepage
 ---
 
-## About Me
+## Education
 
-I am a Ph.D. student at ...
+* **[Mar. 2020 ~ Present]** : Candidate for Integrated M.S. / Ph.D. degree, School of Electrical Engineering @ KAIST.
+* **[Mar. 2015 ~ Feb. 2020]** : B.S. degree (**Cum Laude**), School of Electrical Engineering @ KAIST.
+* **[Mar. 2013 ~ Feb. 2015]** : Gyeongnam Science High School.
+
+## Work Experience
+
+* **[Mar. 2018 ~ Aug. 2018]** AI Research Intern @ Koh Young Technology
+
+## Projects
+
+* **[May. 2023 ~ Present]:** Institute for Security Convergence (ISC) - Precise landing technology for drones  
+* **[Aug. 2023 ~ Dec. 2023]:** Proposal Planning and Research - Comprehensive Maritime Surveillance and Search
+* **[Mar. 2023 ~ Apr. 2023]:** Institute for Security Convergence (ISC) - A Study on CAPTCHA Solving Techniques to Discover its Vulnerabilities
+* **[Sep. 2020 ~ Feb. 2022]:** Ministry of Science and ICT (MSIT) - Anthropocene Study (digital ecology with AI)
+* **[Aug. 2020 ~ Aug. 2021]:** Samsung Advanced Institude of Technology (SAIT) - Monocular Scene Flow estimation
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **3D Vision:** 3D object detection, Scene flow estimation
+- **Novel View Synthesis:** Single-Image view synthesis, Dynamic radiance fields
+- **Generative Models:** Diffusion models, One-Image-to-3D
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Oct. 2023]** Our paper about Dynamic Radiance Fields is accepted to WACV 2024.
 
 {% include_relative _includes/publications.md %}
+
+{% include_relative _includes/patents.md %}
+
+{% include_relative _includes/awards.md %}
 
 {% include_relative _includes/services.md %}

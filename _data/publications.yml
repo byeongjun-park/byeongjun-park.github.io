@@ -1,22 +1,33 @@
 main:
 
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
+  - title: Fine-Grained Multi-Class Object Counting
+    authors: Hyojun Go, Junyoung Byun, <strong>Byeongjun Park</strong>, Myung-Ae Choi, Seunghwa Yoo, Changick Kim
+    conference_short: ICIP
+    conference: IEEE International Conference on Image Processing <strong>(ICIP)</strong>, 2021.
+    pdf: https://ieeexplore.ieee.org/abstract/document/9506384
+    image: ./assets/img/teaser_icip2021.png
+#    notes: Early Accept
 
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+  - title: Bridging Implicit and Explicit Geometric Transformation for Single-Image View Synthesis
+    authors: <strong>Byeongjun Park*</strong>, Hyojun Go*, Changick Kim (*Equal Contribution)
+    conference_short: Under Review
+    conference: Under Review.
+    pdf: https://arxiv.org/pdf/2209.07105.pdf
+#    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+#    page: https://class-il.mpi-inf.mpg.de/mnemonics/
+#    notes: Oral Presentation
+    image: ./assets/img/teaser_pami.png
+
+  - title: Temporal Flow Mask Attention for Open-Set Long-Tailed Recognition of Wild Animals in Camera-Trap Images
+    authors: Jeongsoo Kim, Sangmin Woo, <strong>Byeongjun Park</strong>, Changick Kim
+    conference_short: ICIP
+    conference: IEEE International Conference on Image Processing <strong>(ICIP)</strong>, 2022.
+    pdf: https://arxiv.org/abs/2208.14625
+    image: ./assets/img/teaser_icip2022.png
+
+  - title: Point-DynRF":" Point-based Dynamic Radiance Fields from a Monocular Video
+    authors: <strong>Byeongjun Park</strong>, Changick Kim
+    conference_short: WACV
+    conference: IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</strong>, 2024.
+    pdf: https://arxiv.org/pdf/2310.09647.pdf
+    image: ./assets/img/teaser_wacv.png

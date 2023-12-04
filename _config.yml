@@ -1,7 +1,7 @@
 # Basic Information 
 title: Byeongjun Park
 position: Ph.D. Student
-affiliation: KAIST
+affiliation: EE @ KAIST
 email: pbj3810@kaist.ac.kr
 
 # Search Engine Optimization (SEO)
@@ -20,7 +20,7 @@ github_link: https://github.com/byeongjun-park
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/img/avatar.png
+avatar: ./assets/img/byeongjn.jpg
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
 
