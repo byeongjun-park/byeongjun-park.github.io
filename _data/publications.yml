@@ -2,7 +2,7 @@ main:
 
   - title: Denoising Task Routing for Diffusion Models
     authors: <strong>Byeongjun Park*</strong>, Sangmin Woo*, Hyojun Go*, Jin-Young Kim*, Changick Kim (*Equal Contribution)
-    conference_short: Under Review
+#    conference_short: Under Review
     conference: Under Review...
     pdf: https://arxiv.org/pdf/2310.07138.pdf
     image: ./assets/img/teaser_iclr.png
@@ -16,8 +16,8 @@ main:
 
   - title: Bridging Implicit and Explicit Geometric Transformation for Single-Image View Synthesis
     authors: <strong>Byeongjun Park*</strong>, Hyojun Go*, Changick Kim (*Equal Contribution)
-    conference_short: Under Review
-    conference: Under Review...
+#    conference_short: Under Review
+    conference: Under Review in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
     pdf: https://arxiv.org/pdf/2209.07105.pdf
     OpenReview: https://openreview.net/forum?id=x4JZ3xX5mtv
 #    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
