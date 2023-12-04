@@ -32,8 +32,8 @@ layout: homepage
 
 {% include_relative _includes/publications.md %}
 
-{% include_relative _includes/patents.md %}
-
 {% include_relative _includes/awards.md %}
 
 {% include_relative _includes/services.md %}
+
+{% include_relative _includes/patents.md %}
