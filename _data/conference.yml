@@ -43,4 +43,5 @@ main:
     conference_short: ICIP
     conference: IEEE International Conference on Image Processing <strong>(ICIP)</strong>, 2021.
     pdf: https://ieeexplore.ieee.org/abstract/document/9506384
+    code: https://github.com/gohyojun15/FINE-GRAINED-MULTI-CLASS-OBJECT-COUNTING
     image: ./assets/img/teaser_icip2021.png
