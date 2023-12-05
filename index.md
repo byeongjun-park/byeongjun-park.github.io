@@ -15,7 +15,7 @@ layout: homepage
 ## Research Interests
 
 * **Novel View Synthesis:** Single-Image view synthesis, Dynamic radiance fields
-* **Diffusion Models:** Diffusion models, One-Image-to-3D
+* **Generative Models:** Diffusion models, One-Image-to-3D
 
 ## News
 
