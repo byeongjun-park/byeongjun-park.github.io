@@ -5,8 +5,8 @@ layout: homepage
 ## Education
 
 * **[Mar. 2020 ~ Present]** : Candidate for Integrated M.S. / Ph.D. degree, School of Electrical Engineering @ KAIST.
-    * Computational Intelligence Lab. [[CILAB]](https://cilabs.kaist.ac.kr/). 
-    * Advisor: Changick Kim.
+  * Computational Intelligence Lab. [[CILAB]](https://cilabs.kaist.ac.kr/).  
+  * Advisor: Changick Kim.  
 * **[Mar. 2015 ~ Feb. 2020]** : B.S. degree **(Cum Laude)**, School of Electrical Engineering @ KAIST.
 * **[Mar. 2013 ~ Feb. 2015]** : Gyeongnam Science High School.
 
@@ -40,9 +40,9 @@ layout: homepage
 
 * ### Conference Reviewer
 
-    * **VCIP** @ 2023
-    * **AAAI** @ 2021, 2022
-    * **ICIP** @ 2021, 2022
+  * **VCIP** @ 2023  
+  * **AAAI** @ 2021, 2022  
+  * **ICIP** @ 2021, 2022  
 
 * ### Journal Reviewer
 
