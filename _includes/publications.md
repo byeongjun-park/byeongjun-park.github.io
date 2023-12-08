@@ -1,6 +1,6 @@
 ## Publications
 
-\* indicates equal contribution
+**\* indicates equal contribution**
 
 ### Conference
 
