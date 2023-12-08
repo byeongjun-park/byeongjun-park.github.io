@@ -1,5 +1,7 @@
 ## Publications
 
+`* indicates equal contribution`
+
 ### Conference
 
 <div class="publications">
