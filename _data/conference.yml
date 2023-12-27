@@ -4,6 +4,10 @@ main:
     authors: Sangmin Woo*, <strong>Byeongjun Park*</strong>, Hyojun Go, Jin-Young Kim, Changick Kim
     conference_short: ArXiv
     conference: Under Review...
+    code: https://github.com/byeongjun-park/HarmonyView
+    page: https://byeongjun-park.github.io/HarmonyView/
+    demo: https://huggingface.co/spaces/byeongjun-park/HarmonyView
+    pdf: https://arxiv.org/pdf/2312.15980.pdf
     image: ./assets/img/teaser_harmonyview.png
 
   - title: "DiffRef3D: A Diffusion-based Proposal Refinement Framework for 3D Object Detection"

@@ -31,6 +31,9 @@
       {% if link.OpenReview %} 
       <a href="{{ link.OpenReview }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">OpenReview</a>
       {% endif %}
+      {% if link.Demo %} 
+      <a href="{{ link.Demo }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Demo</a>
+      {% endif %}
       {% if link.code %} 
       <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
       {% endif %}
