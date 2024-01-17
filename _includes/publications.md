@@ -2,7 +2,7 @@
 
 **\* indicates equal contribution**
 
-### Conference
+* ### Conference
 
 <div class="publications">
 <ol class="bibliography">
@@ -58,7 +58,7 @@
 </ol>
 </div>
 
-### Journal
+* ### Journal
 
 
 <div class="publications">
