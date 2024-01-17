@@ -19,8 +19,8 @@ main:
 
   - title: Denoising Task Routing for Diffusion Models
     authors: <strong>Byeongjun Park*</strong>, Sangmin Woo*, Hyojun Go*, Jin-Young Kim*, Changick Kim
-    conference_short: ArXiv
-    conference: Under Review...
+    conference_short: ICLR
+    conference: International Conference on Learning Representations <strong>(ICLR)</strong>, 2024.
     pdf: https://arxiv.org/pdf/2310.07138.pdf
     code: https://github.com/byeongjun-park/DTR
     image: ./assets/img/teaser_iclr.png

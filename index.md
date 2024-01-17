@@ -19,6 +19,7 @@ layout: homepage
 
 ## News
 
+* **[Jan. 2024]** Our paper about Diffusion Model is accepted to ICLR 2024.
 * **[Oct. 2023]** Our paper about Dynamic Radiance Fields is accepted to WACV 2024.
 
 {% include_relative _includes/publications.md %}
