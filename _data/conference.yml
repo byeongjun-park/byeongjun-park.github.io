@@ -23,6 +23,7 @@ main:
     conference: International Conference on Learning Representations <strong>(ICLR)</strong>, 2024.
     pdf: https://arxiv.org/pdf/2310.07138.pdf
     code: https://github.com/byeongjun-park/DTR
+    page: https://byeongjun-park.github.io/DTR/
     OpenReview: https://openreview.net/forum?id=MY0qlcFcUg
     image: ./assets/img/teaser_iclr.png
 
