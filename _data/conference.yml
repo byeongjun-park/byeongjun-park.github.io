@@ -1,8 +1,8 @@
 main:
   - title: "Switch Diffusion Transformer: Synergizing Denoising Tasks with Sparse Mixture-of-Experts"
     authors: <strong>Byeongjun Park</strong>, Hyojun Go, Jin-Young Kim, Sangmin Woo, Seokil Ham, Changick Kim
-    conference_short: Arxiv
-    conference: Arxiv
+    conference_short: arXiv
+    conference: Preprint
     code: https://github.com/byeongjun-park/Switch-DiT
     page: https://byeongjun-park.github.io/Switch-DiT/
     pdf: https://arxiv.org/abs/2403.09176.pdf
