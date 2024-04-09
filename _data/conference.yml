@@ -18,13 +18,6 @@ main:
     pdf: https://arxiv.org/pdf/2312.15980.pdf
     image: ./assets/img/teaser_harmonyview.png
 
-#  - title: "DiffRef3D: A Diffusion-based Proposal Refinement Framework for 3D Object Detection"
-#    authors: Se-Ho Kim*, Inyong Koo*, Inyoung Lee, <strong>Byeongjun Park</strong>, Changick Kim
-#    conference_short: ArXiv
-#    conference: Under Review...
-#    pdf: https://arxiv.org/pdf/2310.16349.pdf
-#    image: ./assets/img/teaser_3dod.png
-
   - title: Denoising Task Routing for Diffusion Models
     authors: <strong>Byeongjun Park*</strong>, Sangmin Woo*, Hyojun Go*, Jin-Young Kim*, Changick Kim
     conference_short: ICLR

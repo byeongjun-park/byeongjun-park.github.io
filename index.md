@@ -4,7 +4,7 @@ layout: homepage
 
 ## Education
 
-* **[Mar. 2020 ~ Present]** : Candidate for Integrated M.S. / Ph.D. degree, School of Electrical Engineering @ KAIST.
+* **[Mar. 2020 ~ Aug. 2025 (expected)]** : Candidate for Integrated M.S. / Ph.D. degree, School of Electrical Engineering @ KAIST.
 * **[Mar. 2015 ~ Feb. 2020]** : B.S. degree **(Cum Laude)**, School of Electrical Engineering @ KAIST.
 * **[Mar. 2013 ~ Feb. 2015]** : Gyeongnam Science High School.
 
@@ -39,9 +39,8 @@ layout: homepage
 
 * ### Conference Reviewer
 
-  * **VCIP** @ 2023  
-  * **AAAI** @ 2021, 2022  
-  * **ICIP** @ 2021, 2022  
+  * **ECCV** @ 2024  
+  * **AAAI** @ 2021, 2022
 
 * ### Journal Reviewer
 
