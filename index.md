@@ -39,6 +39,7 @@ layout: homepage
 
 * ### Conference Reviewer
 
+  * **NeurIPS** @ 2024
   * **ECCV** @ 2024  
   * **AAAI** @ 2021, 2022
 

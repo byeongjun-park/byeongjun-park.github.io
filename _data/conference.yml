@@ -1,4 +1,13 @@
 main:
+  - title: "Diffusion Model Patching via Mixture-of-Prompts"
+    authors: Seokil Ham*, Sangmin Woo*, Hyojun Go, Jin-Young Kim,  <strong>Byeongjun Park</strong>, Changick Kim
+    conference_short: arXiv
+    conference: Preprint
+    code: https://github.com/sangminwoo/DMP
+    page: https://sangminwoo.github.io/DMP/
+    pdf: https://arxiv.org/pdf/2405.17825
+    image: ./assets/img/teaser_dmp.png
+
   - title: "Switch Diffusion Transformer: Synergizing Denoising Tasks with Sparse Mixture-of-Experts"
     authors: <strong>Byeongjun Park</strong>, Hyojun Go, Jin-Young Kim, Sangmin Woo, Seokil Ham, Changick Kim
     conference_short: arXiv
