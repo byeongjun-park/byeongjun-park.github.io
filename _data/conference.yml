@@ -1,6 +1,6 @@
 main:
   - title: "Diffusion Model Patching via Mixture-of-Prompts"
-    authors: Seokil Ham*, Sangmin Woo*, Hyojun Go, Jin-Young Kim,  <strong>Byeongjun Park</strong>, Changick Kim
+    authors: Seokil Ham*, Sangmin Woo*, Jin-Young Kim, Hyojun Go, <strong>Byeongjun Park</strong>, Changick Kim
     conference_short: arXiv
     conference: Preprint
     code: https://github.com/sangminwoo/DMP
