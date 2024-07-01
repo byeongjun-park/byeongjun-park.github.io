@@ -18,6 +18,7 @@ layout: homepage
 
 ## News
 
+* **[Jul. 2024]** One paper about Diffusion Model is accepted to ECCV 2024.
 * **[Mar. 2024]** One paper about Novel View Synthesis is accepted to TPAMI 2024.
 * **[Feb. 2024]** One paper about One-Image-to-3D is accepted to CVPR 2024.
 * **[Jan. 2024]** One paper about Diffusion Model is accepted to ICLR 2024.
