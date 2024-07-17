@@ -32,6 +32,7 @@ layout: homepage
 
 ## Projects
 
+* **[Jul. 2024 ~ Present]:** LIG Nex1 - Underwater sonar image enhancement with AI
 * **[Apr. 2023 ~ Present]:** SOOMVI - Precise landing technology for drones  
 * **[Sep. 2020 ~ Feb. 2022]:** Ministry of Science and ICT (MSIT, Korea) - Digital ecology with AI
 * **[Aug. 2020 ~ Aug. 2021]:** Samsung Advanced Institude of Technology (SAIT) - Monocular scene flow estimation
