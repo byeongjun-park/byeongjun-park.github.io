@@ -39,8 +39,12 @@ layout: homepage
 
 ## Academic Services
 
-* ### Conference Reviewer
+* ### Invited Talks
+  *  **[Aug. 2024]** ETRI - Recent Trends in 3D Content Creation
 
+* ### Conference Reviewer
+  
+  * **ICLR** @ 2025
   * **NeurIPS** @ 2024
   * **ECCV** @ 2024  
   * **AAAI** @ 2021, 2022
