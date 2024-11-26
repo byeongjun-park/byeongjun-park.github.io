@@ -1,4 +1,13 @@
 main:
+  - title: "SplatFlow: Multi-View Rectified Flow Model for 3D Gaussian Splatting Synthesis"
+    authors: Hyojun Go*, <strong>Byeongjun Park*</strong>, Jiho Jang, Jin-Young Kim, Soonwoo Kwon, Changick Kim
+    conference_short: arXiv
+    conference: Preprint
+    code: https://github.com/gohyojun15/SplatFlow/
+    page: https://gohyojun15.github.io/SplatFlow/
+    pdf: https://arxiv.org/pdf/2411.16443
+    image: ./assets/img/splatflow.png
+
   - title: "Diffusion Model Patching via Mixture-of-Prompts"
     authors: Seokil Ham*, Sangmin Woo*, Jin-Young Kim, Hyojun Go, <strong>Byeongjun Park</strong>, Changick Kim
     conference_short: arXiv

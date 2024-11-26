@@ -2,7 +2,7 @@ main:
   - title: "DiffRef3D: A Diffusion-based Proposal Refinement Framework for 3D Object Detection"
     authors: Se-Ho Kim*, Inyong Koo*, Inyoung Lee, <strong>Byeongjun Park</strong>, Changick Kim
     conference_short: ArXiv
-    conference: Under Review in IEEE Transactions on Image Processing <strong>(TIP)</strong>
+    conference: Under Review in Pattern Recognition <strong>(PR)</strong>
     pdf: https://arxiv.org/pdf/2310.16349.pdf
     image: ./assets/img/teaser_3dod.png
 
