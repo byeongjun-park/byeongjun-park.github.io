@@ -21,8 +21,8 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://openrevi
 balancing the preservation of given contents and the realistic genreation of novel views. [[TPAMI'24]](https://ieeexplore.ieee.org/document/10475596)
 [[CVPR'24]](https://openaccess.thecvf.com/content/CVPR2024/html/Woo_HarmonyView_Harmonizing_Consistency_and_Diversity_in_One-Image-to-3D_CVPR_2024_paper.html)
 * **Text-to-3DGS:** Currently, I am interested in direct generation of 3D Gaussian Splatting only from text prompts. 
-Please see my first project in Text-to-3DGS, which utilizes a multi-view recitifed flow model and
-a feed-forward 3D Gaussian Splatting Decoder!! [[SplatFlow]](https://arxiv.org/pdf/2411.16443) 
+Please see [SplatFlow](https://arxiv.org/pdf/2411.16443), which utilizes a multi-view recitifed flow model and
+a feed-forward 3D Gaussian Splatting Decoder!! 
 
 ## News
 
