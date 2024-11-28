@@ -22,7 +22,7 @@ balancing the preservation of given contents and the realistic genreation of nov
 [[CVPR'24]](https://openaccess.thecvf.com/content/CVPR2024/html/Woo_HarmonyView_Harmonizing_Consistency_and_Diversity_in_One-Image-to-3D_CVPR_2024_paper.html)
 * **Text-to-3DGS:** Currently, I am interested in direct generation of 3D Gaussian Splatting only from text prompts. 
 Please see [SplatFlow](https://arxiv.org/pdf/2411.16443), which utilizes a multi-view rectifed flow model and
-a feed-forward 3D Gaussian Splatting Decoder!! 
+a feed-forward 3D Gaussian Splatting decoder!! 
 
 ## News
 
