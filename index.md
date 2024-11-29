@@ -17,10 +17,10 @@ layout: homepage
 * **Diffusion Model Architecture:** Reimagine diffusion training as a multi-task learning, and introduce how to 
 synergize the training of multiple denoising tasks. [[ICLR'24]](https://openreview.net/forum?id=MY0qlcFcUg)
 [[ECCV'24]](https://arxiv.org/abs/2403.09176.pdf)
-* **One-Image-to-3D:** Solve practical problems in generating 3D scenes or objects from a single image, focusing on
+* **Image-to-3D:** Solve practical problems in generating 3D scenes or objects from a single image, focusing on
 balancing the preservation of given contents and the realistic genreation of novel views. [[TPAMI'24]](https://ieeexplore.ieee.org/document/10475596)
 [[CVPR'24]](https://openaccess.thecvf.com/content/CVPR2024/html/Woo_HarmonyView_Harmonizing_Consistency_and_Diversity_in_One-Image-to-3D_CVPR_2024_paper.html)
-* **Text-to-3DGS:** Currently, I am interested in direct generation of 3D Gaussian Splatting only from text prompts. 
+* **Text-to-3D:** Currently, I am interested in direct generation of 3D Gaussian Splatting only from text prompts. 
 Please see [SplatFlow](https://arxiv.org/pdf/2411.16443), which utilizes a multi-view rectifed flow model and
 a feed-forward 3D Gaussian Splatting decoder!! 
 
