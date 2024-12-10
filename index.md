@@ -64,5 +64,4 @@ a feed-forward 3D Gaussian Splatting decoder!!
 ## Awards & Honors
 * **Finalist in Qualcomm Innovation Fellowship 2024 Korea** @ Dec. 2024
 * **Samsung Best Paper Award in IEIE Autumn Annual Conference** @ Nov. 2021
-    * Jeongsoo Kim, **Byeongjun Park**, Seungju Cho, Myung-ae Choi, Jinyoung Park, Hyungsoo Seo, Changick Kim, "An Optical Flow Fusion Deep Learning Network using Trap Camera Image Dataset"
 * **National Academic Excellence Scholarship (Science and Engineering, Korea)** @ 2016, 2017, 2018 
