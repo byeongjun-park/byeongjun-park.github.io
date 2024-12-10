@@ -13,4 +13,4 @@ main:
     pdf: https://arxiv.org/pdf/2209.07105.pdf
 #    OpenReview: https://openreview.net/forum?id=x4JZ3xX5mtv
     image: ./assets/img/teaser_pami.png
-#    notes: IF=24.31
+    notes: IF 20.8 (2024)
