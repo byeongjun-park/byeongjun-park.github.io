@@ -10,8 +10,8 @@ main:
 
   - title: "Diffusion Model Patching via Mixture-of-Prompts"
     authors: Seokil Ham*, Sangmin Woo*, Jin-Young Kim, Hyojun Go, <strong>Byeongjun Park</strong>, Changick Kim
-    conference_short: arXiv
-    conference: Preprint
+    conference_short: AAAI
+    conference: Annual AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2025
     code: https://github.com/sangminwoo/DMP
     page: https://sangminwoo.github.io/DMP/
     pdf: https://arxiv.org/pdf/2405.17825
@@ -35,6 +35,7 @@ main:
     demo: https://huggingface.co/spaces/byeongjun-park/HarmonyView
     pdf: https://arxiv.org/pdf/2312.15980.pdf
     image: ./assets/img/teaser_harmonyview.png
+    notes: Finalist, Qualcomm Innovation Fellowship 2024 Korea
 
   - title: Denoising Task Routing for Diffusion Models
     authors: <strong>Byeongjun Park*</strong>, Sangmin Woo*, Hyojun Go*, Jin-Young Kim*, Changick Kim
