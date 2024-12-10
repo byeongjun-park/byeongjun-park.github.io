@@ -4,8 +4,8 @@ layout: homepage
 
 ## Education
 
-* **[Mar. 2020 ~ Aug. 2025 (expected)]** : Candidate for Integrated M.S. / Ph.D. degree, School of Electrical Engineering @ KAIST.
-* **[Mar. 2015 ~ Feb. 2020]** : B.S. degree **(Cum Laude)**, School of Electrical Engineering @ KAIST.
+* **[Mar. 2020 ~ Aug. 2025]** : Ph.D. in School of Electrical Engineering @ KAIST.
+* **[Mar. 2015 ~ Feb. 2020]** : B.S. in School of Electrical Engineering @ KAIST - **Graduated Cum Laude**.
 * **[Mar. 2013 ~ Feb. 2015]** : Gyeongnam Science High School.
 
 ## Work Experience
