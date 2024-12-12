@@ -52,6 +52,7 @@ a feed-forward 3D Gaussian Splatting decoder!!
 
 * ### Conference Reviewer
   
+  * **ICML** @ 2025
   * **ICLR** @ 2025
   * **NeurIPS** @ 2024
   * **ECCV** @ 2024  
