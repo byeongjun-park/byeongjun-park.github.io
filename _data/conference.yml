@@ -1,8 +1,8 @@
 main:
   - title: "SplatFlow: Multi-View Rectified Flow Model for 3D Gaussian Splatting Synthesis"
     authors: Hyojun Go*, <strong>Byeongjun Park*</strong>, Jiho Jang, Jin-Young Kim, Soonwoo Kwon, Changick Kim
-    conference_short: arXiv
-    conference: Preprint
+    conference_short: CVPR
+    conference: The IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2025
     code: https://github.com/gohyojun15/SplatFlow/
     page: https://gohyojun15.github.io/SplatFlow/
     pdf: https://arxiv.org/pdf/2411.16443

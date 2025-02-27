@@ -20,12 +20,11 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://openrevi
 * **Image-to-3D:** Solve practical problems in generating 3D scenes or objects from a single image, focusing on
 balancing the preservation of given contents and the realistic genreation of novel views. [[TPAMI'24]](https://ieeexplore.ieee.org/document/10475596)
 [[CVPR'24]](https://openaccess.thecvf.com/content/CVPR2024/html/Woo_HarmonyView_Harmonizing_Consistency_and_Diversity_in_One-Image-to-3D_CVPR_2024_paper.html)
-* **Text-to-3D:** Currently, I am interested in direct generation of 3D Gaussian Splatting only from text prompts. 
-Please see [SplatFlow](https://arxiv.org/pdf/2411.16443), which utilizes a multi-view rectifed flow model and
-a feed-forward 3D Gaussian Splatting decoder!! 
+* **Text-to-3D:** Currently, I am interested in direct generation of 3D Gaussian Splatting only from text prompts. [[CVPR'25]](https://arxiv.org/pdf/2411.16443)
 
 ## News
 
+* **[Feb. 2025]** One paper about 3D Generation is accepted to CVPR 2025.
 * **[Dec. 2024]** One paper about Diffusion Model is accepted to AAAI 2025.
 * **[Jul. 2024]** One paper about Diffusion Model is accepted to ECCV 2024.
 * **[Mar. 2024]** One paper about Novel View Synthesis is accepted to TPAMI 2024.
@@ -54,7 +53,7 @@ a feed-forward 3D Gaussian Splatting decoder!!
   
   * **ICML** @ 2025
   * **ICLR** @ 2025
-  * **NeurIPS** @ 2024
+  * **NeurIPS** @ 2024, 2025
   * **ECCV** @ 2024  
   * **AAAI** @ 2021, 2022
 
