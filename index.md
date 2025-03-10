@@ -51,6 +51,7 @@ balancing the preservation of given contents and the realistic genreation of nov
 
 * ### Conference Reviewer
   
+  * **ICCV** @ 2025
   * **ICML** @ 2025
   * **ICLR** @ 2025
   * **NeurIPS** @ 2024, 2025
@@ -58,7 +59,7 @@ balancing the preservation of given contents and the realistic genreation of nov
   * **AAAI** @ 2021, 2022
 
 * ### Journal Reviewer
-
+    * **IEEE Transactions on Image Processing** @ 2025
     * **IET Computer Vision** @ 2023
 
 ## Awards & Honors
