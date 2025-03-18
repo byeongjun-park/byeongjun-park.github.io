@@ -25,7 +25,7 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
 ## News
 
 * **[Feb. 2025]** One paper about 3D Generation is accepted to CVPR 2025.
-* **[Jan. 2025]** I have joined [[EverEx]](https://everex.kr/en) as an advisory member.
+* **[Jan. 2025]** I have joined [EverEx](https://everex.kr/en) as an advisory member.
 * **[Dec. 2024]** One paper about Diffusion Model is accepted to AAAI 2025.
 * **[Jul. 2024]** One paper about Diffusion Model is accepted to ECCV 2024.
 * **[Mar. 2024]** One paper about Novel View Synthesis is accepted to TPAMI 2024.
