@@ -1,4 +1,13 @@
 main:
+  - title: "SteerX: Creating Any Camera-Free 3D and 4D Scenes with Geometric Steering"
+    authors: <strong>Byeongjun Park*</strong>, Hyojun Go*, Hyelin Nam, Byung-Hoon Kim, Hyungjin Chung, Changick Kim
+    conference_short: arXiv
+    conference: preprint, 2025
+    code: https://github.com/byeongjun-park/SteerX/
+    page: https://byeongjun-park.github.io/SteerX/
+    pdf: https://arxiv.org/pdf/2503.12024
+    image: ./assets/img/teaser_steerx.png
+
   - title: "SplatFlow: Multi-View Rectified Flow Model for 3D Gaussian Splatting Synthesis"
     authors: Hyojun Go*, <strong>Byeongjun Park*</strong>, Jiho Jang, Jin-Young Kim, Soonwoo Kwon, Changick Kim
     conference_short: CVPR
@@ -23,7 +32,7 @@ main:
     conference: European Conference on Computer Vision <strong>(ECCV)</strong>, 2024
     code: https://github.com/byeongjun-park/Switch-DiT
     page: https://byeongjun-park.github.io/Switch-DiT/
-    pdf: https://arxiv.org/abs/2403.09176.pdf
+    pdf: https://arxiv.org/pdf/2403.09176.pdf
     image: ./assets/img/teaser_switch.png
 
   - title: "HarmonyView: Harmonizing Consistency and Diversity in One-Image-to-3D"
@@ -61,7 +70,7 @@ main:
     authors: Jeongsoo Kim, Sangmin Woo, <strong>Byeongjun Park</strong>, Changick Kim
     conference_short: ICIP
     conference: IEEE International Conference on Image Processing <strong>(ICIP)</strong>, 2022.
-    pdf: https://arxiv.org/abs/2208.14625
+    pdf: https://arxiv.org/pdf/2208.14625
     image: ./assets/img/teaser_icip2022.png
 
   - title: Fine-Grained Multi-Class Object Counting

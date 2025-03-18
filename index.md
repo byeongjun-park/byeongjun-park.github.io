@@ -15,16 +15,17 @@ layout: homepage
 ## Research Interests
 
 * **Diffusion Model Architecture:** Reimagine diffusion training as a multi-task learning, and introduce how to 
-synergize the training of multiple denoising tasks. [[ICLR'24]](https://openreview.net/forum?id=MY0qlcFcUg)
-[[ECCV'24]](https://arxiv.org/abs/2403.09176.pdf) [[AAAI'25]](https://arxiv.org/abs/2405.17825)
-* **Image-to-3D:** Solve practical problems in generating 3D scenes or objects from a single image, focusing on
-balancing the preservation of given contents and the realistic genreation of novel views. [[TPAMI'24]](https://ieeexplore.ieee.org/document/10475596)
-[[CVPR'24]](https://openaccess.thecvf.com/content/CVPR2024/html/Woo_HarmonyView_Harmonizing_Consistency_and_Diversity_in_One-Image-to-3D_CVPR_2024_paper.html)
-* **Text-to-3D:** Currently, I am interested in direct generation of 3D Gaussian Splatting only from text prompts. [[CVPR'25]](https://arxiv.org/pdf/2411.16443)
+synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongjun-park.github.io/DTR/)
+[[ECCV'24]](https://byeongjun-park.github.io/Switch-DiT/) [[AAAI'25]](https://sangminwoo.github.io/DMP/)
+* **3D Generation:** Create high-quality 3D objects and scenes by using generative models such as GAN, diffusion, rectivied flow models, 
+and lifting them into neural scene representations, such as point clouds, NeRF, and 3DGS. [[TPAMI'24]](https://ieeexplore.ieee.org/document/10475596)
+[[CVPR'24]](https://byeongjun-park.github.io/HarmonyView/) [[CVPR'25]](https://gohyojun15.github.io/SplatFlow/)
+* **X-Series:** My long-term goal is to seamlessly integrate generative models with neural scene representations to create high-quality 3D/4D worlds.  [[SteerX]](https://byeongjun-park.github.io/SteerX/) is the first step in this journey.
 
 ## News
 
 * **[Feb. 2025]** One paper about 3D Generation is accepted to CVPR 2025.
+* **[Jan. 2025]** I have joined [[EverEx]](https://everex.kr/en) as an advisory member.
 * **[Dec. 2024]** One paper about Diffusion Model is accepted to AAAI 2025.
 * **[Jul. 2024]** One paper about Diffusion Model is accepted to ECCV 2024.
 * **[Mar. 2024]** One paper about Novel View Synthesis is accepted to TPAMI 2024.
