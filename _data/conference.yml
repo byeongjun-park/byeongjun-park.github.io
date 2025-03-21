@@ -1,4 +1,13 @@
 main:
+  - title: "VideoRFSplat: Direct Scene-Level Text-to-3D Gaussian Splatting Generation with Flexible Pose and Multi-View Joint Modeling"
+    authors: Hyojun Go*, <strong>Byeongjun Park*</strong>, Hyelin Nam, Byung-Hoon Kim, Hyungjin Chung, Changick Kim
+    conference_short: arXiv
+    conference: preprint, 2025
+    code: https://github.com/gohyojun15/VideoRFSplat/
+    page: https://gohyojun15.github.io/VideoRFSplat/
+    pdf: https://arxiv.org/abs/2503.15855
+    image: ./assets/img/teaser_videorfsplat.png
+
   - title: "SteerX: Creating Any Camera-Free 3D and 4D Scenes with Geometric Steering"
     authors: <strong>Byeongjun Park*</strong>, Hyojun Go*, Hyelin Nam, Byung-Hoon Kim, Hyungjin Chung, Changick Kim
     conference_short: arXiv
