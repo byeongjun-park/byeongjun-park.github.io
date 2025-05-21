@@ -24,7 +24,7 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
 
 ## News
 
-* **[May. 2025]** I passed my Ph.D. thesis defense.
+* **[May. 2025]** I successfully defended my Ph.D. thesis.
 * **[Feb. 2025]** One paper about 3D Generation is accepted to CVPR 2025.
 * **[Jan. 2025]** I have joined [EverEx](https://everex.kr/en) as an advisor.
 * **[Dec. 2024]** One paper about Diffusion Model is accepted to AAAI 2025.
