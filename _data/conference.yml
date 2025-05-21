@@ -16,6 +16,7 @@ main:
     page: https://byeongjun-park.github.io/SteerX/
     pdf: https://arxiv.org/pdf/2503.12024
     image: ./assets/img/teaser_steerx.png
+    notes: CVPR 2025 Workshop @ WorldModelBench
 
   - title: "SplatFlow: Multi-View Rectified Flow Model for 3D Gaussian Splatting Synthesis"
     authors: Hyojun Go*, <strong>Byeongjun Park*</strong>, Jiho Jang, Jin-Young Kim, Soonwoo Kwon, Changick Kim
