@@ -19,11 +19,12 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 [[ECCV'24]](https://byeongjun-park.github.io/Switch-DiT/) [[AAAI'25]](https://sangminwoo.github.io/DMP/)
 * **3D Generation:** Create high-quality 3D objects and scenes by using generative models such as GAN, diffusion, rectivied flow models, 
 and lifting them into neural scene representations, such as point clouds, NeRF, and 3DGS. [[TPAMI'24]](https://ieeexplore.ieee.org/document/10475596)
-[[CVPR'24]](https://byeongjun-park.github.io/HarmonyView/) [[CVPR'25]](https://gohyojun15.github.io/SplatFlow/) [VideoRFSplat](https://gohyojun15.github.io/VideoRFSplat/)
-* **X-Series:** My long-term goal is to seamlessly integrate generative models with neural scene representations to create high-quality 3D/4D worlds.  [SteerX](https://byeongjun-park.github.io/SteerX/) is the first step in this journey.
+[[CVPR'24]](https://byeongjun-park.github.io/HarmonyView/) [[CVPR'25]](https://gohyojun15.github.io/SplatFlow/) [ICCV'25a](https://gohyojun15.github.io/VideoRFSplat/)
+* **X-Series:** My long-term goal is to seamlessly integrate generative models with neural scene representations to create high-quality 3D/4D worlds.  [ICCV'25b](https://byeongjun-park.github.io/SteerX/) is the first step in this journey.
 
 ## News
 
+* **[Jun. 2025]** Two papers about 3D/4D Generation are accepted to ICCV 2025.
 * **[May. 2025]** I successfully defended my Ph.D. thesis.
 * **[Feb. 2025]** One paper about 3D Generation is accepted to CVPR 2025.
 * **[Jan. 2025]** I have joined [EverEx](https://everex.kr/en) as an advisor.
@@ -41,8 +42,8 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
 
 ## Projects
 
-* **[Jul. 2024 ~ Present]:** LIG Nex1 - Underwater sonar image enhancement with AI
-* **[Apr. 2023 ~ Present]:** SOOMVI - Precise landing technology for drones  
+* **[Jul. 2024 ~ Jun. 2025]:** LIG Nex1 - Underwater sonar image enhancement with AI
+* **[Apr. 2023 ~ Jun. 2025]:** SOOMVI - Precise landing technology for drones  
 * **[Sep. 2020 ~ Feb. 2022]:** Ministry of Science and ICT (MSIT, Korea) - Digital ecology with AI
 * **[Aug. 2020 ~ Aug. 2021]:** Samsung Advanced Institude of Technology (SAIT) - Monocular scene flow estimation
 
