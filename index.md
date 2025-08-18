@@ -10,6 +10,7 @@ layout: homepage
 
 ## Work Experience
 
+* **[Aug. 2025 ~ Present]:** Research Scientist @ EverEx (Mandatory Military Service)
 * **[Mar. 2018 ~ Aug. 2018]:** AI Research Intern @ Koh Young Technology
 
 ## Research Interests
@@ -24,6 +25,7 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
 
 ## News
 
+* **[Aug. 2025]** I have joined [EverEx](https://everex.kr/en) as a research scientist.
 * **[Jun. 2025]** Two papers about 3D/4D Generation are accepted to ICCV 2025.
 * **[May. 2025]** I successfully defended my Ph.D. thesis.
 * **[Feb. 2025]** One paper about 3D Generation is accepted to CVPR 2025.
