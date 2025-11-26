@@ -108,19 +108,19 @@ main:
     pdf: https://arxiv.org/abs/2310.09647
     image: ./assets/img/teaser_wacv.png
   
-  - title: "DiffRef3D: A Diffusion-based Proposal Refinement Framework for 3D Object Detection"
-    authors: Se-Ho Kim*, Inyong Koo*, Inyoung Lee, <strong>Byeongjun Park</strong>, Changick Kim
-    conference_short: arXiv
-    conference: Technical Report, 2023
-    pdf: https://arxiv.org/abs/2310.16349
-    image: ./assets/img/teaser_3dod.png
+  # - title: "DiffRef3D: A Diffusion-based Proposal Refinement Framework for 3D Object Detection"
+  #   authors: Se-Ho Kim*, Inyong Koo*, Inyoung Lee, <strong>Byeongjun Park</strong>, Changick Kim
+  #   conference_short: arXiv
+  #   conference: Technical Report, 2023
+  #   pdf: https://arxiv.org/abs/2310.16349
+  #   image: ./assets/img/teaser_3dod.png
   
-  - title: "Balancing Domain Experts for Long-Tailed Camera-Trap Recognition"
-    authors: <strong>Byeongjun Park</strong>, Jeongsoo Kim, Seoungju Cho, Heeseon Kim, Changick Kim
-    conference_short: arXiv
-    conference: Technical Report, 2022
-    pdf: https://arxiv.org/abs/2202.07215
-    image: ./assets/img/teaser_LT.png
+  # - title: "Balancing Domain Experts for Long-Tailed Camera-Trap Recognition"
+  #   authors: <strong>Byeongjun Park</strong>, Jeongsoo Kim, Seoungju Cho, Heeseon Kim, Changick Kim
+  #   conference_short: arXiv
+  #   conference: Technical Report, 2022
+  #   pdf: https://arxiv.org/abs/2202.07215
+  #   image: ./assets/img/teaser_LT.png
 
   - title: Temporal Flow Mask Attention for Open-Set Long-Tailed Recognition of Wild Animals in Camera-Trap Images
     authors: Jeongsoo Kim, Sangmin Woo, <strong>Byeongjun Park</strong>, Changick Kim
