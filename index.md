@@ -56,14 +56,15 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
 
 * ### Conference Reviewer
   
+  * **CVPR** @ 2026
   * **ICCV** @ 2025
+  * **ECCV** @ 2024
   * **ICML** @ 2025
   * **ICLR** @ 2025
   * **NeurIPS** @ 2024, 2025
-  * **ECCV** @ 2024  
-  * **AAAI** @ 2021, 2022
 
 * ### Journal Reviewer
+    * **IEEE Transactions on Visualization and Computer Graphics** @ 2025
     * **IEEE Transactions on Image Processing** @ 2025
     * **IET Computer Vision** @ 2023
 
