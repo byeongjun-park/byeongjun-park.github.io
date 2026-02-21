@@ -1,13 +1,4 @@
 main:
-  - title: "ReDirector: Creating Any-Length Video Retakes with Rotary Camera Encoding"
-    authors: <strong>Byeongjun Park</strong>, Byung-Hoon Kim, Hyungjin Chung, Jong Chul Ye
-    conference_short: arXiv
-    conference: Technical Report, 2025
-    code: https://github.com/byeongjun-park/ReDirector
-    page: https://byeongjun-park.github.io/ReDirector/
-    pdf: https://arxiv.org/abs/2511.19827
-    image: ./assets/img/teaser_redirector.jpg
-
   - title: "Generating Human Motion Videos using a Cascaded Text-to-Video Framework"
     authors: Hyelin Nam, Hyojun Go, <strong>Byeongjun Park</strong>, Byung-Hoon Kim, Hyungjin Chung
     conference_short: arXiv
@@ -17,13 +8,23 @@ main:
     pdf: https://arxiv.org/abs/2510.03909
     image: ./assets/img/teaser_cameo.jpg
 
+  - title: "ReDirector: Creating Any-Length Video Retakes with Rotary Camera Encoding"
+    authors: <strong>Byeongjun Park</strong>, Byung-Hoon Kim, Hyungjin Chung, Jong Chul Ye
+    conference_short: CVPR
+    conference: The IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026
+    code: https://github.com/byeongjun-park/ReDirector
+    page: https://byeongjun-park.github.io/ReDirector/
+    pdf: https://arxiv.org/abs/2511.19827
+    image: ./assets/img/teaser_redirector.jpg
+    
   - title: "Video Parallel Scaling: Aggregating Diverse Frame Subsets for VideoLLMs"
     authors: Hyungjin Chung, Hyelin Nam, Jiyeon Kim, Hyojun Go, <strong>Byeongjun Park</strong>, Seongsu Ha, Byung-Hoon Kim
-    conference_short: arXiv
-    conference: Technical Report, 2025
+    conference_short: CVPR
+    conference: The IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026
     code: https://github.com/hyungjin-chung/VPS/
     pdf: https://arxiv.org/abs/2509.08016
     image: ./assets/img/teaser_vps.png
+    notes: Findings Track
 
   - title: "VideoRFSplat: Direct Scene-Level Text-to-3D Gaussian Splatting Generation with Flexible Pose and Multi-View Joint Modeling"
     authors: Hyojun Go*, <strong>Byeongjun Park*</strong>, Hyelin Nam, Byung-Hoon Kim, Hyungjin Chung, Changick Kim
