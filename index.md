@@ -21,7 +21,7 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 * **3D/4D Generation:** Create high-quality 3D/4D objects and scenes by using generative models such as GAN, diffusion, and RF models, 
 and lifting them into neural scene representations, such as point clouds, NeRF, and 3DGS. [[TPAMI'24]](https://ieeexplore.ieee.org/document/10475596)
 [[CVPR'24]](https://byeongjun-park.github.io/HarmonyView/) [[CVPR'25]](https://gohyojun15.github.io/SplatFlow/) [[ICCV'25a]](https://gohyojun15.github.io/VideoRFSplat/) [[ICCV'25b]](https://byeongjun-park.github.io/SteerX/)
-* **Video Generation/Understanding:** Recently, my research centers on controllable video generation and scalable VideoLLMs. [[CVPR'26a]](https://byeongjun-park.github.io/ReDirector/) [[CVPR'26b]](https://github.com/hyungjin-chung/VPS)
+* **Video Generation/Understanding:** Recently, I am working on various applications in video generation and understandings, including controllable video generation and scalable VideoLLMs. [[CVPR'26a]](https://byeongjun-park.github.io/ReDirector/) [[CVPR'26b]](https://github.com/hyungjin-chung/VPS)
 
 ## News
 
