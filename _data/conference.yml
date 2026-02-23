@@ -1,13 +1,13 @@
 main:
-  - title: "Generating Human Motion Videos using a Cascaded Text-to-Video Framework"
-    authors: Hyelin Nam, Hyojun Go, <strong>Byeongjun Park</strong>, Byung-Hoon Kim, Hyungjin Chung
-    conference_short: arXiv
-    conference: Technical Report, 2025
-    code: https://github.com/HyelinNAM/Cameo
-    page: https://hyelinnam.github.io/Cameo/
-    pdf: https://arxiv.org/abs/2510.03909
-    image: ./assets/img/teaser_cameo.jpg
-    category: video
+  # - title: "Generating Human Motion Videos using a Cascaded Text-to-Video Framework"
+  #   authors: Hyelin Nam, Hyojun Go, <strong>Byeongjun Park</strong>, Byung-Hoon Kim, Hyungjin Chung
+  #   conference_short: arXiv
+  #   conference: Technical Report, 2025
+  #   code: https://github.com/HyelinNAM/Cameo
+  #   page: https://hyelinnam.github.io/Cameo/
+  #   pdf: https://arxiv.org/abs/2510.03909
+  #   image: ./assets/img/teaser_cameo.jpg
+  #   category: video
 
   - title: "ReDirector: Creating Any-Length Video Retakes with Rotary Camera Encoding"
     authors: <strong>Byeongjun Park</strong>, Byung-Hoon Kim, Hyungjin Chung, Jong Chul Ye
