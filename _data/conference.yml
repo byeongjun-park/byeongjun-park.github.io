@@ -113,14 +113,6 @@ main:
     image: ./assets/img/teaser_iclr.png
     category: diffusion
 
-  - title: "Point-DynRF: Point-based Dynamic Radiance Fields from a Monocular Video"
-    authors: <strong>Byeongjun Park</strong>, Changick Kim
-    conference_short: WACV
-    conference: IEEE/CVF Winter Conference on Applications of Computer Vision <strong>(WACV)</strong>, 2024
-    pdf: https://arxiv.org/abs/2310.09647
-    image: ./assets/img/teaser_wacv.png
-    category: other
-
   # - title: "DiffRef3D: A Diffusion-based Proposal Refinement Framework for 3D Object Detection"
   #   authors: Se-Ho Kim*, Inyong Koo*, Inyoung Lee, <strong>Byeongjun Park</strong>, Changick Kim
   #   conference_short: arXiv
@@ -136,10 +128,19 @@ main:
   #   image: ./assets/img/teaser_LT.png
 
   - title: "Method and Apparatus with Scene Flow Estimation"
-    authors: <strong>Byeongjun Park</strong>, Changick Kim
+    authors: Youngjun Kwak, Taekyung Kim, Changick Kim, <strong>Byeongjun Park</strong>, Changbeom Park
     conference_short: Patent
-    conference: US Patent <strong>US20220301190A1</strong>, Sep. 2022
-    page: https://patents.google.com/patent/US20220301190A1/en
+    conference: US Patent <strong>US20220301190A1</strong>, 2025
+    pdf: https://patents.google.com/patent/US20220301190A1/en
+    image: ./assets/img/mono-sf.jpg
+    category: other
+
+  - title: "Point-DynRF: Point-based Dynamic Radiance Fields from a Monocular Video"
+    authors: <strong>Byeongjun Park</strong>, Changick Kim
+    conference_short: WACV
+    conference: IEEE/CVF Winter Conference on Applications of Computer Vision <strong>(WACV)</strong>, 2024
+    pdf: https://arxiv.org/abs/2310.09647
+    image: ./assets/img/teaser_wacv.png
     category: other
 
   - title: Temporal Flow Mask Attention for Open-Set Long-Tailed Recognition of Wild Animals in Camera-Trap Images

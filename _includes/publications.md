@@ -106,6 +106,8 @@
 }
 .pub-category { display: block; }
 .pub-category.hidden { display: none; }
+.service-category { display: block; }
+.service-category.hidden { display: none; }
 </style>
 
 <script>
