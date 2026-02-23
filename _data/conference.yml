@@ -135,6 +135,13 @@ main:
   #   pdf: https://arxiv.org/abs/2202.07215
   #   image: ./assets/img/teaser_LT.png
 
+  - title: "Method and Apparatus with Scene Flow Estimation"
+    authors: <strong>Byeongjun Park</strong>, Changick Kim
+    conference_short: Patent
+    conference: US Patent <strong>US20220301190A1</strong>, Sep. 2022
+    page: https://patents.google.com/patent/US20220301190A1/en
+    category: other
+
   - title: Temporal Flow Mask Attention for Open-Set Long-Tailed Recognition of Wild Animals in Camera-Trap Images
     authors: Jeongsoo Kim, Sangmin Woo, <strong>Byeongjun Park</strong>, Changick Kim
     conference_short: ICIP
