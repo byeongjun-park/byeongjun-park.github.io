@@ -10,22 +10,11 @@
 
 <p style="font-size:0.85rem; color: var(--global-text-color-light); margin-top: 0.25rem;">* indicates equal contribution</p>
 
-{% assign categories = "video,3d4d,diffusion,other" | split: "," %}
-{% assign category_titles = "Video Generation/Understanding,3D/4D Generation,Diffusion Model Architecture,Other" | split: "," %}
-
-{% for i in (0..3) %}
-{% assign cat = categories[i] %}
-{% assign cat_title = category_titles[i] %}
-{% assign pubs = site.data.conference.main | where: "category", cat %}
-{% if pubs.size > 0 %}
-
-<div class="pub-category" data-category="{{ cat }}">
-
+<!-- All: flat list in YAML order -->
+<div class="pub-all">
 <div class="publications">
 <ol class="bibliography">
-
-{% for link in pubs %}
-
+{% for link in site.data.conference.main %}
 <li>
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
@@ -67,16 +56,67 @@
   </div>
 </div>
 </li>
-
 <br>
-
 {% endfor %}
-
 </ol>
 </div>
-
 </div>
 
+<!-- Category views: hidden by default -->
+{% assign categories = "video,3d4d,diffusion,other" | split: "," %}
+{% for cat in categories %}
+{% assign pubs = site.data.conference.main | where: "category", cat %}
+{% if pubs.size > 0 %}
+<div class="pub-category hidden" data-category="{{ cat }}">
+<div class="publications">
+<ol class="bibliography">
+{% for link in pubs %}
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    {% if link.image %}
+    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1">
+    {% endif %}
+    {% if link.conference_short %}
+    <abbr class="badge">{{ link.conference_short }}</abbr>
+    {% endif %}
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
+      <div class="author">{{ link.authors }}</div>
+      <div class="periodical"><em>{{ link.conference }}</em>
+      </div>
+    <div class="links">
+      {% if link.pdf %}
+      <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
+      {% endif %}
+      {% if link.OpenReview %}
+      <a href="{{ link.OpenReview }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">OpenReview</a>
+      {% endif %}
+      {% if link.code %}
+      <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
+      {% endif %}
+      {% if link.page %}
+      <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
+      {% endif %}
+      {% if link.demo %}
+      <a href="{{ link.demo }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Demo</a>
+      {% endif %}
+      {% if link.notes %}
+      <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
+      {% endif %}
+      {% if link.others %}
+      {{ link.others }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+</li>
+<br>
+{% endfor %}
+</ol>
+</div>
+</div>
 {% endif %}
 {% endfor %}
 
@@ -102,6 +142,8 @@
   background: var(--global-theme-color);
   color: #fff;
 }
+.pub-all { display: block; }
+.pub-all.hidden { display: none; }
 .pub-category { display: block; }
 .pub-category.hidden { display: none; }
 .service-category { display: block; }
@@ -111,19 +153,26 @@
 <script>
 (function () {
   var buttons = document.querySelectorAll('[data-filter]');
+  var allDiv = document.querySelector('.pub-all');
   var sections = document.querySelectorAll('.pub-category');
   buttons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var filter = btn.getAttribute('data-filter');
       buttons.forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      sections.forEach(function (sec) {
-        if (filter === 'all' || sec.getAttribute('data-category') === filter) {
-          sec.classList.remove('hidden');
-        } else {
-          sec.classList.add('hidden');
-        }
-      });
+      if (filter === 'all') {
+        allDiv.classList.remove('hidden');
+        sections.forEach(function (sec) { sec.classList.add('hidden'); });
+      } else {
+        allDiv.classList.add('hidden');
+        sections.forEach(function (sec) {
+          if (sec.getAttribute('data-category') === filter) {
+            sec.classList.remove('hidden');
+          } else {
+            sec.classList.add('hidden');
+          }
+        });
+      }
     });
   });
 })();

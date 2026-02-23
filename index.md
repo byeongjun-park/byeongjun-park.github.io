@@ -50,7 +50,7 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 ## Honors and Services
 
 <div class="pub-filter-buttons">
-  <button class="pub-filter-btn" data-service-filter="awards">Awards</button>
+  <button class="pub-filter-btn active" data-service-filter="awards">Awards</button>
   <button class="pub-filter-btn" data-service-filter="talks">Invited Talks</button>
   <button class="pub-filter-btn" data-service-filter="conference">Conference Reviewer</button>
   <button class="pub-filter-btn" data-service-filter="journal">Journal Reviewer</button>
@@ -64,13 +64,13 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 </ul>
 </div>
 
-<div class="service-category" data-service="talks">
+<div class="service-category hidden" data-service="talks">
 <ul>
   <li><strong>[Aug. 2024]</strong> ETRI - Recent Trends in 3D Content Creation</li>
 </ul>
 </div>
 
-<div class="service-category" data-service="conference">
+<div class="service-category hidden" data-service="conference">
 <ul>
   <li><strong>SIGGRAPH</strong> @ 2026</li>
   <li><strong>CVPR</strong> @ 2026</li>
@@ -82,7 +82,7 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 </ul>
 </div>
 
-<div class="service-category" data-service="journal">
+<div class="service-category hidden" data-service="journal">
 <ul>
   <li><strong>IEEE Transactions on Visualization and Computer Graphics</strong> @ 2025</li>
   <li><strong>IEEE Transactions on Image Processing</strong> @ 2025</li>
