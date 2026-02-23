@@ -31,11 +31,13 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
   overflow-y: auto;
   direction: rtl;
   margin-bottom: 2rem;
+  padding-left: 0.5rem;
 }
 .news-scroll ul {
   direction: ltr;
-  padding-left: 1.5rem;
+  padding-left: 0;
   margin: 0;
+  list-style: none;
 }
 .news-scroll::-webkit-scrollbar {
   width: 4px;
