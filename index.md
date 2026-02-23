@@ -35,9 +35,12 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
 }
 .news-scroll ul {
   direction: ltr;
-  padding-left: 0;
+  padding-left: 0.6rem;
   margin: 0;
   list-style: none;
+}
+.news-scroll li {
+  margin-bottom: 0.4rem;
 }
 .news-scroll::-webkit-scrollbar {
   width: 4px;
