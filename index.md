@@ -75,7 +75,7 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
   <li><strong>SIGGRAPH</strong> @ 2026</li>
   <li><strong>CVPR</strong> @ 2026</li>
   <li><strong>ICCV</strong> @ 2025</li>
-  <li><strong>ECCV</strong> @ 2024</li>
+  <li><strong>ECCV</strong> @ 2024, 2026</li>
   <li><strong>ICML</strong> @ 2025</li>
   <li><strong>ICLR</strong> @ 2025</li>
   <li><strong>NeurIPS</strong> @ 2024, 2025</li>
