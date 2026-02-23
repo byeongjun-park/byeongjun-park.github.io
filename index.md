@@ -40,7 +40,7 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
   list-style: none;
 }
 .news-scroll li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
 }
 .news-scroll::-webkit-scrollbar {
   width: 4px;
