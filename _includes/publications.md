@@ -121,7 +121,12 @@
 {% endfor %}
 
 <!-- Other: entries not in video / 3d4d / diffusion -->
-{% assign other_pubs = site.data.conference.main | where_exp: "item", "item.category != 'video' and item.category != '3d4d' and item.category != 'diffusion'" %}
+{% assign other_pubs = "" | split: "" %}
+{% for item in site.data.conference.main %}
+  {% unless item.category == "video" or item.category == "3d4d" or item.category == "diffusion" %}
+    {% assign other_pubs = other_pubs | push: item %}
+  {% endunless %}
+{% endfor %}
 {% if other_pubs.size > 0 %}
 <div class="pub-category hidden" data-category="other">
 <div class="publications">
