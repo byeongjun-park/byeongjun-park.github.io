@@ -47,13 +47,23 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 * **[Aug. 2020 ~ Aug. 2021]:** Samsung Advanced Institude of Technology (SAIT) - Monocular scene flow estimation
 -->
 
-## Academic Services
+## Honors and Services
 
 <div class="pub-filter-buttons">
   <button class="pub-filter-btn active" data-service-filter="all">All</button>
+  <button class="pub-filter-btn" data-service-filter="awards">Awards</button>
   <button class="pub-filter-btn" data-service-filter="talks">Invited Talks</button>
   <button class="pub-filter-btn" data-service-filter="conference">Conference Reviewer</button>
   <button class="pub-filter-btn" data-service-filter="journal">Journal Reviewer</button>
+</div>
+
+<div class="service-category" data-service="awards">
+<h3>Awards</h3>
+<ul>
+  <li><strong>Finalist in Qualcomm Innovation Fellowship 2024 Korea</strong> @ Dec. 2024</li>
+  <li><strong>Samsung Best Paper Award in IEIE Autumn Annual Conference</strong> @ Nov. 2021</li>
+  <li><strong>National Academic Excellence Scholarship (Science and Engineering, Korea)</strong> @ 2016, 2017, 2018</li>
+</ul>
 </div>
 
 <div class="service-category" data-service="talks">
@@ -104,8 +114,3 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
   });
 })();
 </script>
-
-## Awards & Honors
-* **Finalist in Qualcomm Innovation Fellowship 2024 Korea** @ Dec. 2024
-* **Samsung Best Paper Award in IEIE Autumn Annual Conference** @ Nov. 2021
-* **National Academic Excellence Scholarship (Science and Engineering, Korea)** @ 2016, 2017, 2018 
