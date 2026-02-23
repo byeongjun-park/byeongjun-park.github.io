@@ -25,7 +25,31 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
 
 ## News
 
-<div style="max-height: 10rem; overflow-y: auto; padding-right: 0.5rem;">
+<style>
+.news-scroll {
+  max-height: 10rem;
+  overflow-y: auto;
+  direction: rtl;
+  margin-bottom: 2rem;
+}
+.news-scroll ul {
+  direction: ltr;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+.news-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.news-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.news-scroll::-webkit-scrollbar-thumb {
+  background: var(--global-theme-color);
+  border-radius: 2px;
+}
+</style>
+
+<div class="news-scroll">
 <ul>
   <li><strong>[Feb. 2026]</strong> Two papers (1 Main and 1 Findings) are accepted to CVPR 2026.</li>
   <li><strong>[Aug. 2025]</strong> I have joined <a href="https://everex.ai/">EverEx</a> as a research scientist.</li>
