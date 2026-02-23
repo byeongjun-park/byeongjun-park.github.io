@@ -70,6 +70,14 @@ main:
     image: ./assets/img/teaser_dmp.png
     category: diffusion
 
+  - title: "Method and Apparatus with Scene Flow Estimation"
+    authors: Youngjun Kwak, Taekyung Kim, Changick Kim, <strong>Byeongjun Park</strong>, Changbeom Park
+    conference_short: Patent
+    conference: US Patent <strong>US20220301190A1</strong>, 2025
+    pdf: https://patents.google.com/patent/US20220301190A1/en
+    image: ./assets/img/mono-sf.jpg
+    category: other
+    
   - title: Bridging Implicit and Explicit Geometric Transformation for Single-Image View Synthesis
     authors: <strong>Byeongjun Park*</strong>, Hyojun Go*, Changick Kim
     conference_short: TPAMI
@@ -112,28 +120,6 @@ main:
     OpenReview: https://openreview.net/forum?id=MY0qlcFcUg
     image: ./assets/img/teaser_iclr.png
     category: diffusion
-
-  # - title: "DiffRef3D: A Diffusion-based Proposal Refinement Framework for 3D Object Detection"
-  #   authors: Se-Ho Kim*, Inyong Koo*, Inyoung Lee, <strong>Byeongjun Park</strong>, Changick Kim
-  #   conference_short: arXiv
-  #   conference: Technical Report, 2023
-  #   pdf: https://arxiv.org/abs/2310.16349
-  #   image: ./assets/img/teaser_3dod.png
-
-  # - title: "Balancing Domain Experts for Long-Tailed Camera-Trap Recognition"
-  #   authors: <strong>Byeongjun Park</strong>, Jeongsoo Kim, Seoungju Cho, Heeseon Kim, Changick Kim
-  #   conference_short: arXiv
-  #   conference: Technical Report, 2022
-  #   pdf: https://arxiv.org/abs/2202.07215
-  #   image: ./assets/img/teaser_LT.png
-
-  - title: "Method and Apparatus with Scene Flow Estimation"
-    authors: Youngjun Kwak, Taekyung Kim, Changick Kim, <strong>Byeongjun Park</strong>, Changbeom Park
-    conference_short: Patent
-    conference: US Patent <strong>US20220301190A1</strong>, 2025
-    pdf: https://patents.google.com/patent/US20220301190A1/en
-    image: ./assets/img/mono-sf.jpg
-    category: other
 
   - title: "Point-DynRF: Point-based Dynamic Radiance Fields from a Monocular Video"
     authors: <strong>Byeongjun Park</strong>, Changick Kim

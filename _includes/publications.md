@@ -21,8 +21,6 @@
 
 <div class="pub-category" data-category="{{ cat }}">
 
-<h3>{{ cat_title }}</h3>
-
 <div class="publications">
 <ol class="bibliography">
 
@@ -112,7 +110,7 @@
 
 <script>
 (function () {
-  var buttons = document.querySelectorAll('.pub-filter-btn');
+  var buttons = document.querySelectorAll('[data-filter]');
   var sections = document.querySelectorAll('.pub-category');
   buttons.forEach(function (btn) {
     btn.addEventListener('click', function () {

@@ -50,7 +50,6 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 ## Honors and Services
 
 <div class="pub-filter-buttons">
-  <button class="pub-filter-btn active" data-service-filter="all">All</button>
   <button class="pub-filter-btn" data-service-filter="awards">Awards</button>
   <button class="pub-filter-btn" data-service-filter="talks">Invited Talks</button>
   <button class="pub-filter-btn" data-service-filter="conference">Conference Reviewer</button>
@@ -58,7 +57,6 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 </div>
 
 <div class="service-category" data-service="awards">
-<h3>Awards</h3>
 <ul>
   <li><strong>Finalist in Qualcomm Innovation Fellowship 2024 Korea</strong> @ Dec. 2024</li>
   <li><strong>Samsung Best Paper Award in IEIE Autumn Annual Conference</strong> @ Nov. 2021</li>
@@ -67,14 +65,12 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 </div>
 
 <div class="service-category" data-service="talks">
-<h3>Invited Talks</h3>
 <ul>
   <li><strong>[Aug. 2024]</strong> ETRI - Recent Trends in 3D Content Creation</li>
 </ul>
 </div>
 
 <div class="service-category" data-service="conference">
-<h3>Conference Reviewer</h3>
 <ul>
   <li><strong>SIGGRAPH</strong> @ 2026</li>
   <li><strong>CVPR</strong> @ 2026</li>
@@ -87,7 +83,6 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 </div>
 
 <div class="service-category" data-service="journal">
-<h3>Journal Reviewer</h3>
 <ul>
   <li><strong>IEEE Transactions on Visualization and Computer Graphics</strong> @ 2025</li>
   <li><strong>IEEE Transactions on Image Processing</strong> @ 2025</li>
@@ -101,15 +96,20 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
   buttons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var filter = btn.getAttribute('data-service-filter');
+      var isActive = btn.classList.contains('active');
       buttons.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      sections.forEach(function (sec) {
-        if (filter === 'all' || sec.getAttribute('data-service') === filter) {
-          sec.classList.remove('hidden');
-        } else {
-          sec.classList.add('hidden');
-        }
-      });
+      if (isActive) {
+        sections.forEach(function (sec) { sec.classList.remove('hidden'); });
+      } else {
+        btn.classList.add('active');
+        sections.forEach(function (sec) {
+          if (sec.getAttribute('data-service') === filter) {
+            sec.classList.remove('hidden');
+          } else {
+            sec.classList.add('hidden');
+          }
+        });
+      }
     });
   });
 })();
