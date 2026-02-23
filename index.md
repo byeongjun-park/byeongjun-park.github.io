@@ -15,26 +15,30 @@ layout: homepage
 
 ## Research Interests
 
-* **Video Generation/Understanding:** Recently, I am working on various applications in video generation and understandings, including controllable video generation and scalable VideoLLMs. [[CVPR'26a]](https://byeongjun-park.github.io/ReDirector/) [[CVPR'26b]](https://github.com/hyungjin-chung/VPS)
-* **3D/4D Generation:** Create high-quality 3D/4D objects and scenes by using generative models such as GAN, diffusion, and RF models,
-and lifting them into neural scene representations, such as point clouds, NeRF, and 3DGS. [[TPAMI'24]](https://ieeexplore.ieee.org/document/10475596)
-[[CVPR'24]](https://byeongjun-park.github.io/HarmonyView/) [[CVPR'25]](https://gohyojun15.github.io/SplatFlow/) [[ICCV'25a]](https://gohyojun15.github.io/VideoRFSplat/) [[ICCV'25b]](https://byeongjun-park.github.io/SteerX/)
 * **Diffusion Model Architecture:** Reimagine diffusion training as a multi-task learning, and introduce how to
 synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongjun-park.github.io/DTR/)
 [[ECCV'24]](https://byeongjun-park.github.io/Switch-DiT/) [[AAAI'25]](https://sangminwoo.github.io/DMP/)
+* **3D/4D Generation:** Create high-quality 3D/4D objects and scenes by using generative models such as GAN, diffusion, and RF models,
+and lifting them into neural scene representations, such as point clouds, NeRF, and 3DGS. [[TPAMI'24]](https://ieeexplore.ieee.org/document/10475596)
+[[CVPR'24]](https://byeongjun-park.github.io/HarmonyView/) [[CVPR'25]](https://gohyojun15.github.io/SplatFlow/) [[ICCV'25a]](https://gohyojun15.github.io/VideoRFSplat/) [[ICCV'25b]](https://byeongjun-park.github.io/SteerX/)
+* **Video Generation/Understanding:** Recently, I am working on various applications in video generation and understandings, including controllable video generation and scalable VideoLLMs. [[CVPR'26a]](https://byeongjun-park.github.io/ReDirector/) [[CVPR'26b]](https://github.com/hyungjin-chung/VPS)
 
 ## News
 
-* **[Feb. 2026]** Two papers (1 Main and 1 Findings) are accepted to CVPR 2026.
-* **[Aug. 2025]** I have joined [EverEx](https://everex.kr/en) as a research scientist.
-* **[Jun. 2025]** Two papers about 3D/4D Generation are accepted to ICCV 2025.
-* **[May. 2025]** I successfully defended my Ph.D. thesis.
-* **[Feb. 2025]** One paper about 3D Generation is accepted to CVPR 2025.
-* **[Dec. 2024]** One paper about Diffusion Model is accepted to AAAI 2025.
-* **[Jul. 2024]** One paper about Diffusion Model is accepted to ECCV 2024.
-* **[Mar. 2024]** One paper about Novel View Synthesis is accepted to TPAMI 2024.
-* **[Feb. 2024]** One paper about One-Image-to-3D is accepted to CVPR 2024.
-* **[Jan. 2024]** One paper about Diffusion Model is accepted to ICLR 2024.
+<div style="max-height: 10rem; overflow-y: auto; padding-right: 0.5rem;">
+<ul>
+  <li><strong>[Feb. 2026]</strong> Two papers (1 Main and 1 Findings) are accepted to CVPR 2026.</li>
+  <li><strong>[Aug. 2025]</strong> I have joined <a href="https://everex.ai/">EverEx</a> as a research scientist.</li>
+  <li><strong>[Jun. 2025]</strong> Two papers about 3D/4D Generation are accepted to ICCV 2025.</li>
+  <li><strong>[May. 2025]</strong> I successfully defended my Ph.D. thesis.</li>
+  <li><strong>[Feb. 2025]</strong> One paper about 3D Generation is accepted to CVPR 2025.</li>
+  <li><strong>[Dec. 2024]</strong> One paper about Diffusion Model is accepted to AAAI 2025.</li>
+  <li><strong>[Jul. 2024]</strong> One paper about Diffusion Model is accepted to ECCV 2024.</li>
+  <li><strong>[Mar. 2024]</strong> One paper about Novel View Synthesis is accepted to TPAMI 2024.</li>
+  <li><strong>[Feb. 2024]</strong> One paper about One-Image-to-3D is accepted to CVPR 2024.</li>
+  <li><strong>[Jan. 2024]</strong> One paper about Diffusion Model is accepted to ICLR 2024.</li>
+</ul>
+</div>
 
 {% include_relative _includes/publications.md %}
 
