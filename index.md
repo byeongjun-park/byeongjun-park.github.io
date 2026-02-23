@@ -42,31 +42,75 @@ synergize the training of multiple denoising tasks. [[ICLR'24]](https://byeongju
 
 * **[Sep. 2022]** Method and apparatus with scene flow estimation (US20220301190A1) [[link]](https://patents.google.com/patent/US20220301190A1/en)
 
+<!--
 ## Projects
 
 * **[Jul. 2024 ~ Jun. 2025]:** LIG Nex1 - Underwater sonar image enhancement with AI
-* **[Apr. 2023 ~ Jun. 2025]:** SOOMVI - Precise landing technology for drones  
+* **[Apr. 2023 ~ Jun. 2025]:** SOOMVI - Precise landing technology for drones
 * **[Sep. 2020 ~ Feb. 2022]:** Ministry of Science and ICT (MSIT, Korea) - Digital ecology with AI
 * **[Aug. 2020 ~ Aug. 2021]:** Samsung Advanced Institude of Technology (SAIT) - Monocular scene flow estimation
+-->
 
 ## Academic Services
 
-* ### Invited Talks
-  *  **[Aug. 2024]** ETRI - Recent Trends in 3D Content Creation
+<div class="pub-filter-buttons">
+  <button class="pub-filter-btn active" data-service-filter="all">All</button>
+  <button class="pub-filter-btn" data-service-filter="talks">Invited Talks</button>
+  <button class="pub-filter-btn" data-service-filter="conference">Conference Reviewer</button>
+  <button class="pub-filter-btn" data-service-filter="journal">Journal Reviewer</button>
+</div>
 
-* ### Conference Reviewer
-  
-  * **SIGGRAPH** @ 2026
-  * **CVPR** @ 2026
-  * **ICCV** @ 2025
-  * **ECCV** @ 2024
-  * **ICML** @ 2025
-  * **ICLR** @ 2025
-  * **NeurIPS** @ 2024, 2025
+<div class="service-category" data-service="talks">
 
-* ### Journal Reviewer
-    * **IEEE Transactions on Visualization and Computer Graphics** @ 2025
-    * **IEEE Transactions on Image Processing** @ 2025
+### Invited Talks
+
+* **[Aug. 2024]** ETRI - Recent Trends in 3D Content Creation
+
+</div>
+
+<div class="service-category" data-service="conference">
+
+### Conference Reviewer
+
+* **SIGGRAPH** @ 2026
+* **CVPR** @ 2026
+* **ICCV** @ 2025
+* **ECCV** @ 2024
+* **ICML** @ 2025
+* **ICLR** @ 2025
+* **NeurIPS** @ 2024, 2025
+
+</div>
+
+<div class="service-category" data-service="journal">
+
+### Journal Reviewer
+
+* **IEEE Transactions on Visualization and Computer Graphics** @ 2025
+* **IEEE Transactions on Image Processing** @ 2025
+
+</div>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('[data-service-filter]');
+  var sections = document.querySelectorAll('.service-category');
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = btn.getAttribute('data-service-filter');
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      sections.forEach(function (sec) {
+        if (filter === 'all' || sec.getAttribute('data-service') === filter) {
+          sec.classList.remove('hidden');
+        } else {
+          sec.classList.add('hidden');
+        }
+      });
+    });
+  });
+})();
+</script>
 
 ## Awards & Honors
 * **Finalist in Qualcomm Innovation Fellowship 2024 Korea** @ Dec. 2024
