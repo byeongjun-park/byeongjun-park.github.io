@@ -1,17 +1,17 @@
 ## Publications
 
-**\* indicates equal contribution**
-
 <div class="pub-filter-buttons">
   <button class="pub-filter-btn active" data-filter="all">All</button>
-  <button class="pub-filter-btn" data-filter="diffusion">Diffusion Model Architecture</button>
-  <button class="pub-filter-btn" data-filter="3d4d">3D/4D Generation</button>
   <button class="pub-filter-btn" data-filter="video">Video Generation/Understanding</button>
+  <button class="pub-filter-btn" data-filter="3d4d">3D/4D Generation</button>
+  <button class="pub-filter-btn" data-filter="diffusion">Diffusion Model Architecture</button>
   <button class="pub-filter-btn" data-filter="other">Other</button>
 </div>
 
-{% assign categories = "diffusion,3d4d,video,other" | split: "," %}
-{% assign category_titles = "Diffusion Model Architecture,3D/4D Generation,Video Generation/Understanding,Other" | split: "," %}
+<p style="font-size:0.85rem; color: var(--global-text-color-light); margin-top: 0.25rem;">* indicates equal contribution</p>
+
+{% assign categories = "video,3d4d,diffusion,other" | split: "," %}
+{% assign category_titles = "Video Generation/Understanding,3D/4D Generation,Diffusion Model Architecture,Other" | split: "," %}
 
 {% for i in (0..3) %}
 {% assign cat = categories[i] %}
@@ -21,7 +21,7 @@
 
 <div class="pub-category" data-category="{{ cat }}">
 
-### {{ cat_title }}
+<h3>{{ cat_title }}</h3>
 
 <div class="publications">
 <ol class="bibliography">
