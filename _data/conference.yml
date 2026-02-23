@@ -7,6 +7,7 @@ main:
     page: https://hyelinnam.github.io/Cameo/
     pdf: https://arxiv.org/abs/2510.03909
     image: ./assets/img/teaser_cameo.jpg
+    category: video
 
   - title: "ReDirector: Creating Any-Length Video Retakes with Rotary Camera Encoding"
     authors: <strong>Byeongjun Park</strong>, Byung-Hoon Kim, Hyungjin Chung, Jong Chul Ye
@@ -16,7 +17,8 @@ main:
     page: https://byeongjun-park.github.io/ReDirector/
     pdf: https://arxiv.org/abs/2511.19827
     image: ./assets/img/teaser_redirector.jpg
-    
+    category: video
+
   - title: "Video Parallel Scaling: Aggregating Diverse Frame Subsets for VideoLLMs"
     authors: Hyungjin Chung, Hyelin Nam, Jiyeon Kim, Hyojun Go, <strong>Byeongjun Park</strong>, Seongsu Ha, Byung-Hoon Kim
     conference_short: CVPR
@@ -25,6 +27,7 @@ main:
     pdf: https://arxiv.org/abs/2509.08016
     image: ./assets/img/teaser_vps.png
     notes: Findings Track
+    category: video
 
   - title: "VideoRFSplat: Direct Scene-Level Text-to-3D Gaussian Splatting Generation with Flexible Pose and Multi-View Joint Modeling"
     authors: Hyojun Go*, <strong>Byeongjun Park*</strong>, Hyelin Nam, Byung-Hoon Kim, Hyungjin Chung, Changick Kim
@@ -34,7 +37,8 @@ main:
     page: https://gohyojun15.github.io/VideoRFSplat/
     pdf: https://arxiv.org/abs/2503.15855
     image: ./assets/img/teaser_videorfsplat.png
-    
+    category: 3d4d
+
   - title: "SteerX: Creating Any Camera-Free 3D and 4D Scenes with Geometric Steering"
     authors: <strong>Byeongjun Park*</strong>, Hyojun Go*, Hyelin Nam, Byung-Hoon Kim, Hyungjin Chung, Changick Kim
     conference_short: ICCV
@@ -44,6 +48,7 @@ main:
     pdf: https://arxiv.org/abs/2503.12024
     image: ./assets/img/teaser_steerx.png
     notes: CVPR 2025 Workshop on WorldModelBench
+    category: 3d4d
 
   - title: "SplatFlow: Multi-View Rectified Flow Model for 3D Gaussian Splatting Synthesis"
     authors: Hyojun Go*, <strong>Byeongjun Park*</strong>, Jiho Jang, Jin-Young Kim, Soonwoo Kwon, Changick Kim
@@ -53,6 +58,7 @@ main:
     page: https://gohyojun15.github.io/SplatFlow/
     pdf: https://arxiv.org/abs/2411.16443
     image: ./assets/img/splatflow.png
+    category: 3d4d
 
   - title: "Diffusion Model Patching via Mixture-of-Prompts"
     authors: Seokil Ham*, Sangmin Woo*, Jin-Young Kim, Hyojun Go, <strong>Byeongjun Park</strong>, Changick Kim
@@ -62,6 +68,7 @@ main:
     page: https://sangminwoo.github.io/DMP/
     pdf: https://arxiv.org/abs/2405.17825
     image: ./assets/img/teaser_dmp.png
+    category: diffusion
 
   - title: Bridging Implicit and Explicit Geometric Transformation for Single-Image View Synthesis
     authors: <strong>Byeongjun Park*</strong>, Hyojun Go*, Changick Kim
@@ -71,6 +78,7 @@ main:
     OpenReview: https://openreview.net/forum?id=x4JZ3xX5mtv
     image: ./assets/img/teaser_pami.png
     notes: IF=20.8 (2024)
+    category: 3d4d
 
   - title: "Switch Diffusion Transformer: Synergizing Denoising Tasks with Sparse Mixture-of-Experts"
     authors: <strong>Byeongjun Park</strong>, Hyojun Go, Jin-Young Kim, Sangmin Woo, Seokil Ham, Changick Kim
@@ -80,6 +88,7 @@ main:
     page: https://byeongjun-park.github.io/Switch-DiT/
     pdf: https://arxiv.org/abs/2403.09176
     image: ./assets/img/teaser_switch.png
+    category: diffusion
 
   - title: "HarmonyView: Harmonizing Consistency and Diversity in One-Image-to-3D"
     authors: Sangmin Woo*, <strong>Byeongjun Park*</strong>, Hyojun Go, Jin-Young Kim, Changick Kim
@@ -91,6 +100,7 @@ main:
     pdf: https://arxiv.org/abs/2312.15980
     image: ./assets/img/teaser_harmonyview.png
     notes: Finalist, Qualcomm Innovation Fellowship 2024 Korea
+    category: 3d4d
 
   - title: Denoising Task Routing for Diffusion Models
     authors: <strong>Byeongjun Park*</strong>, Sangmin Woo*, Hyojun Go*, Jin-Young Kim*, Changick Kim
@@ -101,6 +111,7 @@ main:
     page: https://byeongjun-park.github.io/DTR/
     OpenReview: https://openreview.net/forum?id=MY0qlcFcUg
     image: ./assets/img/teaser_iclr.png
+    category: diffusion
 
   - title: "Point-DynRF: Point-based Dynamic Radiance Fields from a Monocular Video"
     authors: <strong>Byeongjun Park</strong>, Changick Kim
@@ -108,14 +119,15 @@ main:
     conference: IEEE/CVF Winter Conference on Applications of Computer Vision <strong>(WACV)</strong>, 2024
     pdf: https://arxiv.org/abs/2310.09647
     image: ./assets/img/teaser_wacv.png
-  
+    category: other
+
   # - title: "DiffRef3D: A Diffusion-based Proposal Refinement Framework for 3D Object Detection"
   #   authors: Se-Ho Kim*, Inyong Koo*, Inyoung Lee, <strong>Byeongjun Park</strong>, Changick Kim
   #   conference_short: arXiv
   #   conference: Technical Report, 2023
   #   pdf: https://arxiv.org/abs/2310.16349
   #   image: ./assets/img/teaser_3dod.png
-  
+
   # - title: "Balancing Domain Experts for Long-Tailed Camera-Trap Recognition"
   #   authors: <strong>Byeongjun Park</strong>, Jeongsoo Kim, Seoungju Cho, Heeseon Kim, Changick Kim
   #   conference_short: arXiv
@@ -129,6 +141,7 @@ main:
     conference: IEEE International Conference on Image Processing <strong>(ICIP)</strong>, 2022
     pdf: https://arxiv.org/abs/2208.14625
     image: ./assets/img/teaser_icip2022.png
+    category: other
 
   - title: Fine-Grained Multi-Class Object Counting
     authors: Hyojun Go, Junyoung Byun, <strong>Byeongjun Park</strong>, Myung-Ae Choi, Seunghwa Yoo, Changick Kim
@@ -137,3 +150,4 @@ main:
     pdf: https://ieeexplore.ieee.org/abstract/document/9506384
     code: https://github.com/gohyojun15/FINE-GRAINED-MULTI-CLASS-OBJECT-COUNTING
     image: ./assets/img/teaser_icip2021.png
+    category: other
