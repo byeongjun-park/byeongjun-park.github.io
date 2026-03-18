@@ -13,6 +13,8 @@ layout: homepage
 * **[Aug. 2025 ~ Present]:** Research Scientist @ EverEx (Mandatory Military Service)
 * **[Mar. 2018 ~ Aug. 2018]:** AI Research Intern @ Koh Young Technology
 
+<p style="color: red; font-weight: bold;">I am actively looking for Research Scientist Positions (or equivalent roles), starting in Fall 2026. Please feel free to reach out.</p>
+
 ## Research Interests
 
 * **Diffusion Model Architecture:** Reimagine diffusion training as a multi-task learning, and introduce how to
