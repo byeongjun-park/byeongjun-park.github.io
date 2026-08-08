@@ -2,7 +2,7 @@ main:
   - title: "Generating Human Motion Videos using a Cascaded Text-to-Video Framework"
     authors: Hyelin Nam, Hyojun Go, <strong>Byeongjun Park</strong>, Byung-Hoon Kim, Hyungjin Chung
     conference_short: BMVC
-    conference: The British Machine Vision Conference, 2026
+    conference: The British Machine Vision Conference <strong>(BMVC)</strong>, 2026
     code: https://github.com/HyelinNAM/Cameo
     page: https://hyelinnam.github.io/Cameo/
     pdf: https://arxiv.org/abs/2510.03909
