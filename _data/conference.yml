@@ -21,12 +21,11 @@ main:
 
   - title: "Video Parallel Scaling: Aggregating Diverse Frame Subsets for VideoLLMs"
     authors: Hyungjin Chung, Hyelin Nam, Jiyeon Kim, Hyojun Go, <strong>Byeongjun Park</strong>, Seongsu Ha, Byung-Hoon Kim
-    conference_short: CVPR
-    conference: The IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026
+    conference_short: CVPR Findings
+    conference: The IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong> Findings, 2026
     code: https://github.com/hyungjin-chung/VPS/
     pdf: https://arxiv.org/abs/2509.08016
     image: ./assets/img/teaser_vps.png
-    notes: Findings Track
     category: video
 
   - title: "VideoRFSplat: Direct Scene-Level Text-to-3D Gaussian Splatting Generation with Flexible Pose and Multi-View Joint Modeling"

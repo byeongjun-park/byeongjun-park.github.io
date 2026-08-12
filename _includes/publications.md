@@ -5,7 +5,7 @@
   <button class="pub-filter-btn" data-filter="video">Video Generation/Understanding</button>
   <button class="pub-filter-btn" data-filter="3d4d">3D/4D Generation</button>
   <button class="pub-filter-btn" data-filter="diffusion">Diffusion Model Architecture</button>
-  <button class="pub-filter-btn" data-filter="other">Other</button>
+  <button class="pub-filter-btn" data-filter="other">Others</button>
 </div>
 
 <p style="font-size:0.85rem; color: var(--global-text-color-light); margin-top: 0.25rem;">* indicates equal contribution</p>
