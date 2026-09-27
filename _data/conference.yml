@@ -1,12 +1,13 @@
 main:
   - title: "MVVBench: Benchmarking 4D Reasoning in Vision-Language Models"
     authors: Hyungjin Chung*, <strong>Byeongjun Park*</strong>, Joonseok Lee, Hojun Kim, Jaeho Choi, Byung-Hoon Kim
-    conference_short: NeurIPS
+    conference_short: NeurIPS E&D
     conference: Advances in Neural Information Processing Systems <strong>(NeurIPS)</strong> , 2026
     # code: https://github.com/HyelinNAM/Cameo
     # page: https://hyelinnam.github.io/Cameo/
     # pdf: https://arxiv.org/abs/2510.03909
     image: ./assets/img/mvvbench.jpg
+    note: Evaluations & Datasets Track
     category: video
 
   - title: "Generating Human Motion Videos using a Cascaded Text-to-Video Framework"
