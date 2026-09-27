@@ -58,6 +58,7 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
 
 <div class="news-scroll">
 <ul>
+  <li><strong>[Sep. 2026]</strong> One paper about Video Understanding is accepted to NeurIPS 2026.</li>
   <li><strong>[Aug. 2026]</strong> One paper about Video Generation is accepted to BMVC 2026.</li>
   <li><strong>[Feb. 2026]</strong> Two papers (1 Main and 1 Findings) are accepted to CVPR 2026.</li>
   <li><strong>[Aug. 2025]</strong> I have joined <a href="https://everex.ai/">EverEx</a> as a research scientist.</li>
