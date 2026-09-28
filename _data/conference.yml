@@ -3,8 +3,6 @@ main:
     authors: Hyungjin Chung*, <strong>Byeongjun Park*</strong>, Joonseok Lee, Hojun Kim, Jaeho Choi, Byung-Hoon Kim
     conference_short: NeurIPS E&D
     conference: Advances in Neural Information Processing Systems <strong>(NeurIPS)</strong> - Evaluations & Datasets Track, 2026
-    # code: https://github.com/HyelinNAM/Cameo
-    # page: https://hyelinnam.github.io/Cameo/
     dataset: https://huggingface.co/datasets/everex/MVVBench
     pdf: https://arxiv.org/abs/2609.30952
     image: ./assets/img/mvvbench.jpg
