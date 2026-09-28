@@ -58,18 +58,18 @@ and lifting them into neural scene representations, such as point clouds, NeRF, 
 
 <div class="news-scroll">
 <ul>
-  <li><strong>[Sep. 2026]</strong> One paper about Video Understanding is accepted to NeurIPS 2026 (E&D Track).</li>
-  <li><strong>[Aug. 2026]</strong> One paper about Video Generation is accepted to BMVC 2026.</li>
+  <li><strong>[Sep. 2026]</strong> One paper is accepted to NeurIPS 2026 (E&D Track).</li>
+  <li><strong>[Aug. 2026]</strong> One paper is accepted to BMVC 2026.</li>
   <li><strong>[Feb. 2026]</strong> Two papers (1 Main and 1 Findings) are accepted to CVPR 2026.</li>
   <li><strong>[Aug. 2025]</strong> I have joined <a href="https://everex.ai/">EverEx</a> as a research scientist.</li>
-  <li><strong>[Jun. 2025]</strong> Two papers about 3D/4D Generation are accepted to ICCV 2025.</li>
+  <li><strong>[Jun. 2025]</strong> Two papers are accepted to ICCV 2025.</li>
   <li><strong>[May. 2025]</strong> I successfully defended my Ph.D. thesis.</li>
-  <li><strong>[Feb. 2025]</strong> One paper about 3D Generation is accepted to CVPR 2025.</li>
-  <li><strong>[Dec. 2024]</strong> One paper about Diffusion Model is accepted to AAAI 2025.</li>
-  <li><strong>[Jul. 2024]</strong> One paper about Diffusion Model is accepted to ECCV 2024.</li>
-  <li><strong>[Mar. 2024]</strong> One paper about Novel View Synthesis is accepted to TPAMI 2024.</li>
-  <li><strong>[Feb. 2024]</strong> One paper about One-Image-to-3D is accepted to CVPR 2024.</li>
-  <li><strong>[Jan. 2024]</strong> One paper about Diffusion Model is accepted to ICLR 2024.</li>
+  <li><strong>[Feb. 2025]</strong> One paper is accepted to CVPR 2025.</li>
+  <li><strong>[Dec. 2024]</strong> One paper is accepted to AAAI 2025.</li>
+  <li><strong>[Jul. 2024]</strong> One paper accepted to ECCV 2024.</li>
+  <li><strong>[Mar. 2024]</strong> One paper is accepted to TPAMI 2024.</li>
+  <li><strong>[Feb. 2024]</strong> One paper is accepted to CVPR 2024.</li>
+  <li><strong>[Jan. 2024]</strong> One paper is accepted to ICLR 2024.</li>
 </ul>
 </div>
 
