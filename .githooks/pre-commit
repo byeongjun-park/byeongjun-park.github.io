@@ -1,0 +1,35 @@
+#!/bin/sh
+# Cache-busting: stamp index.html's main.css / main.js URLs with ?v=<hash of their content>.
+# Runs inside the same commit (no extra commit). The hash is taken from the *staged*
+# version of each file, and only the ?v= values are changed in index.html — any other
+# unstaged edits in index.html are left unstaged.
+#
+# One-time setup per clone:  git config core.hooksPath .githooks
+
+set -e
+HTML=index.html
+git cat-file -e ":$HTML" 2>/dev/null || exit 0      # index.html not tracked: nothing to do
+
+stamp() {  # $1 = staged blob hash of main.css, $2 = of main.js; reads HTML on stdin
+  sed -E \
+    -e "s#(assets/css/main\.css)(\?v=[0-9a-f]*)?\"#\1?v=$1\"#" \
+    -e "s#(assets/js/main\.js)(\?v=[0-9a-f]*)?\"#\1?v=$2\"#"
+}
+
+CSS=$(git rev-parse --short=8 ":assets/css/main.css")
+JS=$(git rev-parse --short=8 ":assets/js/main.js")
+
+# 1) staged copy of index.html -> stamped blob in the index
+OLD=$(git rev-parse ":$HTML")
+NEW=$(git show ":$HTML" | stamp "$CSS" "$JS" | git hash-object -w --stdin)
+[ "$OLD" = "$NEW" ] && exit 0                       # versions already current
+MODE=$(git ls-files -s "$HTML" | cut -d' ' -f1)
+git update-index --cacheinfo "$MODE,$NEW,$HTML"
+
+# 2) same change in the working tree, so the file on disk matches what was committed
+if [ -f "$HTML" ]; then
+  TMP=$(mktemp)
+  stamp "$CSS" "$JS" < "$HTML" > "$TMP" && cat "$TMP" > "$HTML"
+  rm -f "$TMP"
+fi
+echo "pre-commit: index.html -> main.css?v=$CSS, main.js?v=$JS"

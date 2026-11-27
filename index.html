@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Byeongjun Park · AI Research Scientist</title>
+  <meta name="description" content="Byeongjun Park — AI Research Scientist at EverEx working on video, 3D, and 4D generation and world (action) models.">
+  <meta name="keywords" content="Byeongjun Park, video generation, 3D generation, 4D generation, diffusion models, Gaussian splatting, KAIST">
+  <link rel="canonical" href="https://byeongjun-park.github.io/">
+  <meta name="theme-color" content="#f8fafb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1418" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Byeongjun Park">
+  <meta property="og:title" content="Byeongjun Park">
+  <meta property="og:description" content="Byeongjun Park — AI Research Scientist at EverEx working on video, 3D, and 4D generation and world (action) models.">
+  <meta property="og:url" content="https://byeongjun-park.github.io/">
+  <meta property="og:image" content="https://byeongjun-park.github.io/assets/img/byeongjun.jpg">
+  <meta property="og:image:alt" content="Portrait of Byeongjun Park">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Byeongjun Park">
+  <meta name="twitter:description" content="Byeongjun Park — AI Research Scientist at EverEx working on video, 3D, and 4D generation and world (action) models.">
+  <link rel="icon" href="./assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Byeongjun Park",
+    "url": "https://byeongjun-park.github.io/",
+    "image": "https://byeongjun-park.github.io/assets/img/byeongjun.jpg",
+    "jobTitle": "AI Research Scientist",
+    "worksFor": { "@type": "Organization", "name": "EverEx", "url": "https://everex.ai/" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "KAIST", "url": "https://www.kaist.ac.kr/" },
+    "knowsAbout": ["Video generation", "3D generation", "4D generation", "Diffusion models", "World models"],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=VzPQ7dYAAAAJ",
+      "https://github.com/byeongjun-park",
+      "https://www.linkedin.com/in/byeongjun-park-11379b2a3/"
+    ]
+  }
+  </script>
+
+  <!-- Apply saved theme before first paint to avoid a flash; flag JS for scroll-reveal styles -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      // if main.js never runs, don't leave scroll-reveal blocks invisible
+      setTimeout(function () { if (!window.__revealReady) root.classList.remove('js'); }, 3000);
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css?v=9e524cea">
+</head>
+<body>
+<!-- Icons: Font Awesome Free 6.5.1 (CC BY 4.0, fontawesome.com/license/free) and Academicons 1.9.4 (SIL OFL 1.1) -->
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <symbol id="i-moon" viewBox="0 0 384 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></symbol>
+  <symbol id="i-envelope" viewBox="0 0 512 512"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></symbol>
+  <symbol id="i-google-scholar" viewBox="0 0 384 512"><path d="M 343.75868,106.66243 V 79.430205 L 363.52365,63.999997 H 149.63354 L 20.476345,176.2736 h 85.656075 c -0.15534,2.12494 -0.21914,4.04644 -0.21914,6.22563 0,20.84472 7.2192,38.08662 21.67203,51.86089 14.45284,13.79702 32.25124,20.64784 53.32651,20.64784 4.92319,0 9.75059,-0.36794 14.43842,-1.02419 -2.90722,6.50082 -4.37457,12.52302 -4.37457,18.14228 0,9.87526 4.49924,20.4304 13.46715,31.6418 -39.23377,2.6705 -68.06112,9.73264 -86.43702,21.16322 -10.53108,6.49907 -19.000207,14.70396 -25.390349,24.5311 -6.390569,9.89933 -9.577754,20.51525 -9.577754,31.9616 0,9.64822 2.062375,18.33611 6.21907,26.06233 4.156694,7.7263 9.577757,14.07047 16.312223,18.98408 6.71825,4.96781 14.46899,9.10088 23.219,12.46874 8.73429,3.34378 17.40643,5.71858 26.06106,7.06258 8.62707,1.34222 17.20471,1.9985 25.70579,1.9985 13.46887,0 26.95353,-1.73428 40.54711,-5.18707 13.56165,-3.48461 26.28022,-8.64143 38.17105,-15.4927 11.85935,-6.80488 21.51545,-16.0865 28.9219,-27.7183 7.39024,-11.67998 11.09457,-24.80499 11.09457,-39.33613 0,-11.01584 -2.24964,-21.03852 -6.7502,-30.14073 -4.46864,-9.07202 -9.93785,-16.54102 -16.45271,-22.34403 -6.5008,-5.81263 -12.99987,-11.15539 -19.51512,-15.9679 -6.50083,-4.84488 -12.00021,-9.75058 -16.46884,-14.8129 -4.4848,-5.04657 -6.73444,-10.05419 -6.73444,-14.98395 0,-4.92145 1.73422,-9.67183 5.21588,-14.26559 3.45451,-4.6095 7.67376,-9.04795 12.60967,-13.30571 4.93756,-4.24944 9.87523,-8.96788 14.79665,-14.13302 4.92147,-5.14719 9.14072,-11.82739 12.60971,-20.00822 3.48467,-8.17907 5.20318,-17.44489 5.20318,-27.75679 0,-13.4527 -2.54714,-24.46065 -7.54735,-33.31348 -0.59369,-1.02243 -1.21757,-1.80338 -1.87511,-3.02225 l 56.90745,-46.672136 v 17.118526 c -7.39373,0.92969 -6.62422,5.34582 -6.62422,10.6352 v 128.66719 c 0,5.95832 4.8751,10.83382 10.83386,10.83382 h 3.98869 c 5.95835,0 10.83386,-4.87506 10.83386,-10.83382 V 117.29282 c 0,-5.27669 0.77741,-9.68801 -6.56167,-10.63039 z M 236.39865,329.14114 c 1.14099,0.7503 3.7039,2.78075 7.7184,6.03838 4.0495,3.24319 6.797,5.69582 8.26567,7.41432 1.43851,1.66381 3.5792,4.16501 6.37617,7.54734 2.81268,3.3744 4.7184,6.30394 5.71853,8.73425 1.00016,2.4767 2.01603,5.46089 3.04636,8.94556 0.98567,3.44488 1.48486,6.97595 1.48486,10.56169 0,17.04813 -6.56338,29.68007 -19.65604,37.85915 -13.125,8.18083 -28.76651,12.27368 -46.93767,12.27368 -9.18709,0 -18.2031,-1.09289 -27.06247,-3.1951 -8.84322,-2.11665 -17.31192,-5.3362 -25.39035,-9.60185 -8.07846,-4.25771 -14.57754,-10.20337 -19.50072,-17.79659 -4.93764,-7.64012 -7.40645,-16.41464 -7.40645,-26.24962 0,-10.32022 2.79692,-19.28987 8.42233,-26.90588 5.59343,-7.62564 12.93774,-13.3919 22.03208,-17.3154 9.0624,-3.94582 18.24946,-6.74232 27.56166,-8.39827 9.31221,-1.7023 18.79679,-2.555 28.43842,-2.555 4.46862,0 7.93582,0.25115 10.40465,0.69607 0.45456,0.21918 3.03188,2.07025 7.73456,5.56326 4.70401,3.46237 7.62565,5.59519 8.75047,6.38401 z m -3.35823,-100.5779 c -7.40648,8.85938 -17.73454,13.2882 -30.95363,13.2882 -11.85933,0 -22.29766,-4.76482 -31.26554,-14.31195 -8.99984,-9.52309 -15.42235,-20.32803 -19.34408,-32.43061 -3.93752,-12.10871 -5.90585,-23.98423 -5.90585,-35.648 0,-13.6942 3.59542,-25.35184 10.7809,-34.97598 7.18727,-9.64952 17.49915,-14.48477 30.93786,-14.48477 11.87507,0 22.37423,5.03825 31.43704,15.15677 9.09434,10.08482 15.60961,21.41303 19.5169,33.96799 3.92176,12.5392 5.87345,24.52979 5.87345,35.98399 0,13.44658 -3.70256,24.60984 -11.07663,33.45436 z"/></symbol>
+  <symbol id="i-cv" viewBox="0 0 512 512"><path d="m 249.17973,328.32402 c -9.78758,15.38441 -19.17851,30.4337 -40.22128,45.05521 -11.25687,7.89055 -37.16464,23.30604 -73.9908,23.30604 -70.258325,0 -126.9676516,-51.07979 -126.9676516,-140.88446 0,-78.48565 53.3447156,-140.48607 128.4662816,-140.48607 30.4337,0 57.47396,10.52167 77.38654,26.30447 18.41392,14.65033 27.03796,29.30348 34.56291,42.45573 l -52.58013,26.27338 c -3.76134,-8.62631 -8.28954,-17.64933 -19.91259,-27.40585 -12.78437,-10.15549 -25.53991,-13.15224 -36.45998,-13.15224 -42.821335,0 -65.364452,39.82459 -65.364452,84.14459 0,58.23852 29.700162,87.14305 65.364452,87.14305 34.5629,0 48.47976,-24.0418 57.47396,-39.42563 l 52.24332,26.67235 z M 433.37382,123.57317 H 504 L 411.96314,388.7947 H 344.36647 L 253.46212,123.57317 h 70.62446 l 54.84337,188.60017 z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></symbol>
+  <symbol id="i-file-lines" viewBox="0 0 384 512"><path d="M64 464c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16H224v80c0 17.7 14.3 32 32 32h80V448c0 8.8-7.2 16-16 16H64zM64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V154.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0H64zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24H264c13.3 0 24-10.7 24-24s-10.7-24-24-24H120z"/></symbol>
+  <symbol id="i-file-pdf" viewBox="0 0 512 512"><path d="M64 464l48 0 0 48-48 0c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L229.5 0c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3L384 304l-48 0 0-144-80 0c-17.7 0-32-14.3-32-32l0-80L64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 512 512"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/></symbol>
+  <symbol id="i-database" viewBox="0 0 448 512"><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 384 512"><path d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 384 512"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></symbol>
+  <symbol id="i-graduation-cap" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 576 512"><path d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"/></symbol>
+  <symbol id="i-microphone" viewBox="0 0 384 512"><path d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 640 512"><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></symbol>
+  <symbol id="i-book-open" viewBox="0 0 576 512"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></symbol>
+  <symbol id="i-certificate" viewBox="0 0 512 512"><path d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#top">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Byeongjun Park</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#news">News</a>
+      <a href="#publications"><span class="lbl-lg">Publications</span><span class="lbl-sm">Papers</span></a>
+      <a href="#experience">Experience</a>
+      <a href="#honors">Honors</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">
+      <svg class="ic icon-moon" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg><svg class="ic icon-sun" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="container" id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <img class="avatar" src="./assets/img/byeongjun.jpg" width="200" height="200" alt="Portrait of Byeongjun Park">
+    <div class="hero-text">
+      <h1>Byeongjun Park</h1>
+      <p class="hero-role">AI Research Scientist @ EverEx</p>
+      <p class="hero-bio">I am an AI Research Scientist at EverEx. Previously, I received my B.S. and Ph.D. degrees in Electrical Engineering from KAIST, where I was advised by Prof. Changick Kim. My Ph.D. thesis, <em>&ldquo;Scalable Generative Modeling for Visual Content Creation,&rdquo;</em> explores inference-time scaling methods and scalable training strategies for diffusion transformers. My current research centers on video, 3D, and 4D generation, and lately on world (action) models in particular.</p>
+      <div class="hero-links">
+        <a class="chip js-email" href="#" data-user="byeongjun.prk" data-domain="gmail.com"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-envelope"/></svg>Email</a>
+        <a class="chip" href="https://scholar.google.com/citations?user=VzPQ7dYAAAAJ&hl=en" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-google-scholar"/></svg>Scholar</a>
+        <a class="chip" href="assets/files/Byeongjun_Resume.pdf" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-cv"/></svg>CV</a>
+        <a class="chip" href="https://github.com/byeongjun-park" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>GitHub</a>
+        <a class="chip" href="https://www.linkedin.com/in/byeongjun-park-11379b2a3/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-linkedin"/></svg>LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="section">
+    <h2>Research Interests</h2>
+    <div class="research-grid">
+      <div class="card research-card">
+        <h3>Video Generation & Understanding</h3>
+        <p>Developing controllable video diffusion and its few-step distillation, as well as scalable inference methods for VideoLLMs and a benchmark for reasoning across multi-view 4D scenes.</p>
+        <div class="tag-row">
+          <a class="tag" href="https://arxiv.org/abs/2511.19827" target="_blank" rel="noopener">CVPR'26a</a>
+          <a class="tag" href="https://arxiv.org/abs/2509.08016" target="_blank" rel="noopener">CVPR'26b</a>
+          <a class="tag" href="https://arxiv.org/abs/2510.03909" target="_blank" rel="noopener">BMVC'26</a>
+          <a class="tag" href="https://arxiv.org/abs/2609.30952" target="_blank" rel="noopener">NeurIPS'26</a>
+          <a class="tag" href="https://arxiv.org/abs/2609.03563" target="_blank" rel="noopener">Preprint'26</a>
+        </div>
+        <a class="card-link" href="#publications" data-show="video">See all <span class="js-count">5</span> papers <svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="card research-card">
+        <h3>3D/4D Generation</h3>
+        <p>Creating high-quality 3D/4D objects and scenes with generative models (GAN, diffusion, rectified flow) and lifting them into point cloud, mesh, NeRF, and 3DGS representations.</p>
+        <div class="tag-row">
+          <a class="tag" href="https://arxiv.org/abs/2209.07105" target="_blank" rel="noopener">TPAMI'24</a>
+          <a class="tag" href="https://arxiv.org/abs/2312.15980" target="_blank" rel="noopener">CVPR'24</a>
+          <a class="tag" href="https://arxiv.org/abs/2411.16443" target="_blank" rel="noopener">CVPR'25</a>
+          <a class="tag" href="https://arxiv.org/abs/2503.15855" target="_blank" rel="noopener">ICCV'25a</a>
+          <a class="tag" href="https://arxiv.org/abs/2503.12024" target="_blank" rel="noopener">ICCV'25b</a>
+        </div>
+        <a class="card-link" href="#publications" data-show="3d4d">See all <span class="js-count">5</span> papers <svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="card research-card">
+        <h3>Diffusion Model Architecture</h3>
+        <p>Reimagining diffusion training as multi-task learning over denoising tasks at different noise levels, and synergizing the training of these tasks with Mixture-of-Experts frameworks.</p>
+        <div class="tag-row">
+          <a class="tag" href="https://arxiv.org/abs/2310.07138" target="_blank" rel="noopener">ICLR'24</a>
+          <a class="tag" href="https://arxiv.org/abs/2403.09176" target="_blank" rel="noopener">ECCV'24</a>
+          <a class="tag" href="https://arxiv.org/abs/2405.17825" target="_blank" rel="noopener">AAAI'25</a>
+        </div>
+        <a class="card-link" href="#publications" data-show="diffusion">See all <span class="js-count">3</span> papers <svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section id="news" class="section">
+    <h2>News</h2>
+    <ul class="news">
+      <li>
+        <span class="news-date">Sep. 2026</span>
+        <span class="news-text">One paper is accepted to NeurIPS 2026 (E&amp;D&nbsp;Track).</span>
+      </li>
+      <li>
+        <span class="news-date">Aug. 2026</span>
+        <span class="news-text">One paper is accepted to BMVC 2026.</span>
+      </li>
+      <li>
+        <span class="news-date">Feb. 2026</span>
+        <span class="news-text">Two papers (1 Main and 1 Findings) are accepted to CVPR 2026.</span>
+      </li>
+      <li>
+        <span class="news-date">Aug. 2025</span>
+        <span class="news-text">I have joined <a href="https://everex.ai/" target="_blank" rel="noopener">EverEx</a> as a research scientist.</span>
+      </li>
+      <li>
+        <span class="news-date">Jun. 2025</span>
+        <span class="news-text">Two papers are accepted to ICCV 2025.</span>
+      </li>
+      <li>
+        <span class="news-date">May 2025</span>
+        <span class="news-text">I successfully defended my Ph.D. thesis.</span>
+      </li>
+      <li class="news-extra">
+        <span class="news-date">Feb. 2025</span>
+        <span class="news-text">One paper is accepted to CVPR 2025.</span>
+      </li>
+      <li class="news-extra">
+        <span class="news-date">Dec. 2024</span>
+        <span class="news-text">One paper is accepted to AAAI 2025.</span>
+      </li>
+      <li class="news-extra">
+        <span class="news-date">Jul. 2024</span>
+        <span class="news-text">One paper is accepted to ECCV 2024.</span>
+      </li>
+      <li class="news-extra">
+        <span class="news-date">Mar. 2024</span>
+        <span class="news-text">One paper is accepted to TPAMI 2024.</span>
+      </li>
+      <li class="news-extra">
+        <span class="news-date">Feb. 2024</span>
+        <span class="news-text">One paper is accepted to CVPR 2024.</span>
+      </li>
+      <li class="news-extra">
+        <span class="news-date">Jan. 2024</span>
+        <span class="news-text">One paper is accepted to ICLR 2024.</span>
+      </li>
+    </ul>
+    <button class="text-btn news-toggle" type="button" aria-expanded="false">Show all news <svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-chevron-down"/></svg></button>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="section">
+    <div class="section-head">
+      <h2>Publications</h2>
+      <p class="muted small">* equal contribution</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter publications">
+      <button type="button" class="filter active" data-filter="all" aria-pressed="true">All <span class="count">17</span></button>
+      <button type="button" class="filter" data-filter="video" aria-pressed="false"><span class="lbl-lg">Video Generation &amp; Understanding</span><span class="lbl-sm">Video</span> <span class="count">5</span></button>
+      <button type="button" class="filter" data-filter="3d4d" aria-pressed="false"><span class="lbl-lg">3D/4D Generation</span><span class="lbl-sm">3D/4D</span> <span class="count">5</span></button>
+      <button type="button" class="filter" data-filter="diffusion" aria-pressed="false"><span class="lbl-lg">Diffusion Model Architecture</span><span class="lbl-sm">Diffusion</span> <span class="count">3</span></button>
+      <button type="button" class="filter" data-filter="other" aria-pressed="false">Others <span class="count">4</span></button>
+    </div>
+    <div class="pub-list">
+      <article class="pub" data-category="video">
+        <div class="pub-body">
+          <h3 class="pub-title">FlashRender: Few-Step Generative Rendering via Camera-Controlled Video MeanFlow</h3>
+          <p class="pub-authors"><span class="au"><strong>Byeongjun Park</strong></span>, <span class="au">Byung-Hoon Kim</span>, <span class="au">Hyungjin Chung</span></p>
+          <p class="pub-meta"><span class="pub-venue">Preprint 2026</span><span class="pub-cat">Video Generation &amp; Understanding</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-flashrender"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2609.03563" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/byeongjun-park/FlashRender" target="_blank" rel="noopener" data-repo="byeongjun-park/FlashRender"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">15</span></span></a>
+              <a class="btn" href="https://byeongjun-park.github.io/FlashRender/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Project Page</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <video src="./assets/video/flashrender.mp4" poster="./assets/video/flashrender.jpg" width="640" height="400" muted loop playsinline preload="none" aria-label="FlashRender: Few-Step Generative Rendering via Camera-Controlled Video MeanFlow teaser video"></video>
+        </div>
+        <div class="pub-abstract" id="abs-flashrender">
+          <div><p>We present FlashRender, a few-step generative rendering framework that retakes a source video along a target camera trajectory in seconds. We identify sampling-step-dependent camera control as a prominent manifestation of discretization error in existing multi-step generative rendering models and show that resolving this inconsistency substantially lowers denoising trajectory curvature, facilitating subsequent step distillation. To this end, we introduce Representation Transformation and Alignment (RETA), which aligns hidden source-video representations with target-video features from a frozen visual geometry model. This directly encodes the geometric transformation within the source-video stream, enabling sampling-step-consistent camera control. We then fine-tune the model with the MeanFlow objective on the lower-curvature denoising trajectory induced by RETA, allowing the model to more effectively address discretization error. Finally, we apply on-policy flow map distillation to correct self-rollout errors under fixed few-step sampling. Extensive experiments show that RETA, MeanFlow, and on-policy flow map distillation play complementary roles in few-step generative rendering. Together, they enable our approach to match multi-step baselines in video quality and geometric consistency at 25x lower sampling cost while achieving superior camera controllability, even under out-of-distribution target camera trajectories.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="video">
+        <div class="pub-body">
+          <h3 class="pub-title">MVVBench: Benchmarking 4D Reasoning in Vision-Language Models</h3>
+          <p class="pub-authors"><span class="au">Hyungjin Chung*</span>, <span class="au"><strong>Byeongjun Park*</strong></span>, <span class="au">Joonseok Lee</span>, <span class="au">Hojun Kim</span>, <span class="au">Jaeho Choi</span>, <span class="au">Byung-Hoon Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">NeurIPS 2026 E&amp;D Track</span><span class="pub-cat">Video Generation &amp; Understanding</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-1"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2609.30952" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://huggingface.co/datasets/everex/MVVBench" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-database"/></svg>Dataset</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/mvvbench.jpg" width="720" height="450" alt="MVVBench: Benchmarking 4D Reasoning in Vision-Language Models" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-1">
+          <div><p>Multi-view video understanding requires integrating spatial and temporal evidence across multiple, often non-overlapping camera streams: tracking entities as they transition between viewpoints, aligning events across time, and reasoning about latent 4D continuity rather than any single visible frame. We introduce MVVBench, a benchmark for multi-view video reasoning built from real world multi camera datasets. Questions are curated to be monocular-ambiguous along both the view and the temporal axis: each question is unanswerable from any single view in the designated input set, and the majority are further unanswerable from any single moment. Each question becomes uniquely solvable only by jointly reasoning across views and across time. MVVBench spans diverse dynamic scenes and probes six capabilities: implicit/explicit attribute identification, implicit/explicit relative distance, relative camera pose, and compositional counting, with human-authored QA and rigorous verification. Beyond benchmarking, we provide an extensive analysis of when and why current vision language models succeed or fail, characterizing errors due to temporal mis-localization, cross-view identity breaks, and brittle multi-hop reasoning. We then study inference-time elicitation strategies that unlock latent multi-view competence—task-specific chain-of-thought scaffolds and structured cross-view evidence aggregation—yielding substantial gains without retraining. Finally, we present preliminary evidence that reinforcement learning with verifiable rewards can elicit some latent multi-view competence in the base model, pointing to training-time approaches as a promising direction for future work. Together, MVVBench offers a rigorous evaluation of 4D multi-view reasoning and a foundation for future progress toward reliable embodied perception.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="video">
+        <div class="pub-body">
+          <h3 class="pub-title">Generating Human Motion Videos using a Cascaded Text-to-Video Framework</h3>
+          <p class="pub-authors"><span class="au">Hyelin Nam</span>, <span class="au">Hyojun Go</span>, <span class="au"><strong>Byeongjun Park</strong></span>, <span class="au">Byung-Hoon Kim</span>, <span class="au">Hyungjin Chung</span></p>
+          <p class="pub-meta"><span class="pub-venue">BMVC 2026</span><span class="pub-cat">Video Generation &amp; Understanding</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-2"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2510.03909" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/HyelinNAM/Cameo" target="_blank" rel="noopener" data-repo="HyelinNAM/Cameo"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">6</span></span></a>
+              <a class="btn" href="https://hyelinnam.github.io/Cameo/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Project Page</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <video src="./assets/video/cameo.mp4" poster="./assets/video/cameo.jpg" width="640" height="400" muted loop playsinline preload="none" aria-label="Generating Human Motion Videos using a Cascaded Text-to-Video Framework teaser video"></video>
+        </div>
+        <div class="pub-abstract" id="abs-2">
+          <div><p>Human video generation is becoming an increasingly important task with broad applications in graphics, entertainment, and embodied AI. Despite the rapid progress of video diffusion models (VDMs), their use for general-purpose human video generation remains underexplored, with most works constrained to image-to-video setups or narrow domains like dance videos. In this work, we propose CAMEO, a cascaded framework for general human motion video generation. It seamlessly bridges Text-to-Motion (T2M) models and conditional VDMs, mitigating suboptimal factors that may arise in this process across both training and inference through carefully designed components. Specifically, we analyze and prepare both textual prompts and visual conditions to effectively train the VDM, ensuring robust alignment between motion descriptions, conditioning signals, and the generated videos. Furthermore, we introduce a camera-aware conditioning module that connects the two stages, automatically selecting viewpoints aligned with the input text to enhance coherence and reduce manual intervention. We demonstrate the effectiveness of our approach on both the MovieGen benchmark and a newly introduced benchmark tailored to the T2M-VDM combination, while highlighting its versatility across diverse use cases.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="video">
+        <div class="pub-body">
+          <h3 class="pub-title">ReDirector: Creating Any-Length Video Retakes with Rotary Camera Encoding</h3>
+          <p class="pub-authors"><span class="au"><strong>Byeongjun Park</strong></span>, <span class="au">Byung-Hoon Kim</span>, <span class="au">Hyungjin Chung</span>, <span class="au">Jong Chul Ye</span></p>
+          <p class="pub-meta"><span class="pub-venue">CVPR 2026</span><span class="pub-cat">Video Generation &amp; Understanding</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-3"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2511.19827" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/byeongjun-park/ReDirector" target="_blank" rel="noopener" data-repo="byeongjun-park/ReDirector"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">42</span></span></a>
+              <a class="btn" href="https://byeongjun-park.github.io/ReDirector/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Project Page</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <video src="./assets/video/redirector.mp4" poster="./assets/video/redirector.jpg" width="640" height="400" muted loop playsinline preload="none" aria-label="ReDirector: Creating Any-Length Video Retakes with Rotary Camera Encoding teaser video"></video>
+        </div>
+        <div class="pub-abstract" id="abs-3">
+          <div><p>We present ReDirector, a novel camera-controlled video retake generation method for dynamically captured variable-length videos. In particular, we rectify a common misuse of RoPE in previous works by aligning the spatiotemporal positions of the input video and the target retake. Moreover, we introduce Rotary Camera Encoding (RoCE), a camera-conditioned RoPE phase shift that captures and integrates multi-view relationships within and across the input and target videos. By integrating camera conditions into RoPE, our method generalizes to out-of-distribution camera trajectories and video lengths, yielding improved dynamic object localization and static background preservation. Extensive experiments further demonstrate significant improvements in camera controllability, geometric consistency, and video quality across various trajectories and lengths.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="video">
+        <div class="pub-body">
+          <h3 class="pub-title">Video Parallel Scaling: Aggregating Diverse Frame Subsets for VideoLLMs</h3>
+          <p class="pub-authors"><span class="au">Hyungjin Chung</span>, <span class="au">Hyelin Nam</span>, <span class="au">Jiyeon Kim</span>, <span class="au">Hyojun Go</span>, <span class="au"><strong>Byeongjun Park</strong></span>, <span class="au">Seongsu Ha</span>, <span class="au">Byung-Hoon Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">CVPR 2026 Findings</span><span class="pub-cat">Video Generation &amp; Understanding</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-4"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2509.08016" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/hyungjin-chung/VPS/" target="_blank" rel="noopener" data-repo="hyungjin-chung/VPS"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">16</span></span></a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/teaser_vps.jpg" width="720" height="243" alt="Video Parallel Scaling: Aggregating Diverse Frame Subsets for VideoLLMs" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-4">
+          <div><p>Video Large Language Models (VideoLLMs) face a critical bottleneck: increasing the number of input frames to capture fine-grained temporal detail leads to prohibitive computational costs and performance degradation from long context lengths. We introduce Video Parallel Scaling (VPS), an inference-time method that expands a model's perceptual bandwidth without increasing its context window. VPS operates by running multiple parallel inference streams, each processing a unique, disjoint subset of the video's frames. By aggregating the output probabilities from these complementary streams, VPS integrates a richer set of visual information than is possible with a single pass. We theoretically show that this approach effectively contracts the Chinchilla scaling law by leveraging uncorrelated visual evidence, thereby improving performance without additional training. Extensive experiments across various model architectures and scales (2B-32B) on benchmarks such as Video-MME and EventHallusion demonstrate that VPS consistently and significantly improves performance. It scales more favorably than other parallel alternatives (e.g. Self-consistency) and is complementary to other decoding strategies, offering a memory-efficient and robust framework for enhancing the temporal reasoning capabilities of VideoLLMs.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="3d4d">
+        <div class="pub-body">
+          <h3 class="pub-title">VideoRFSplat: Direct Scene-Level Text-to-3D Gaussian Splatting Generation with Flexible Pose and Multi-View Joint Modeling</h3>
+          <p class="pub-authors"><span class="au">Hyojun Go*</span>, <span class="au"><strong>Byeongjun Park*</strong></span>, <span class="au">Hyelin Nam</span>, <span class="au">Byung-Hoon Kim</span>, <span class="au">Hyungjin Chung</span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">ICCV 2025</span><span class="pub-cat">3D/4D Generation</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-5"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2503.15855" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/gohyojun15/VideoRFSplat/" target="_blank" rel="noopener" data-repo="gohyojun15/VideoRFSplat"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">23</span></span></a>
+              <a class="btn" href="https://gohyojun15.github.io/VideoRFSplat/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Project Page</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <video src="./assets/video/videorfsplat.mp4?v=2" poster="./assets/video/videorfsplat.jpg?v=2" width="640" height="400" muted loop playsinline preload="none" aria-label="VideoRFSplat: Direct Scene-Level Text-to-3D Gaussian Splatting Generation with Flexible Pose and Multi-View Joint Modeling teaser video"></video>
+        </div>
+        <div class="pub-abstract" id="abs-5">
+          <div><p>We propose VideoRFSplat, a direct text-to-3D model leveraging a video generation model to generate realistic 3D Gaussian Splatting (3DGS) for unbounded real-world scenes. To generate diverse camera poses and unbounded spatial extent of real-world scenes, while ensuring generalization to arbitrary text prompts, previous methods fine-tune 2D generative models to jointly model camera poses and multi-view images. However, these methods suffer from instability when extending 2D generative models to joint modeling due to the modality gap, which necessitates additional models to stabilize training and inference. In this work, we propose an architecture and a sampling strategy to jointly model multi-view images and camera poses when fine-tuning a video generation model. Our core idea is a dual-stream architecture that attaches a dedicated pose generation model alongside a pre-trained video generation model via communication blocks, generating multi-view images and camera poses through separate streams. This design reduces interference between the pose and image modalities. Additionally, we propose an asynchronous sampling strategy that denoises camera poses faster than multi-view images, allowing rapidly denoised poses to condition multi-view generation, reducing mutual ambiguity and enhancing cross-modal consistency. Trained on multiple large-scale real-world datasets (RealEstate10K, MVImgNet, DL3DV-10K, ACID), VideoRFSplat outperforms existing text-to-3D direct generation methods that heavily depend on post-hoc refinement via score distillation sampling, achieving superior results without such refinement.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="3d4d">
+        <div class="pub-body">
+          <h3 class="pub-title">SteerX: Creating Any Camera-Free 3D and 4D Scenes with Geometric Steering</h3>
+          <p class="pub-authors"><span class="au"><strong>Byeongjun Park*</strong></span>, <span class="au">Hyojun Go*</span>, <span class="au">Hyelin Nam</span>, <span class="au">Byung-Hoon Kim</span>, <span class="au">Hyungjin Chung</span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">ICCV 2025</span><span class="pub-cat">3D/4D Generation</span></p>
+            <p class="pub-note"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-award"/></svg>CVPR 2025 Workshop on WorldModelBench</p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-6"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2503.12024" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/byeongjun-park/SteerX/" target="_blank" rel="noopener" data-repo="byeongjun-park/SteerX"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">52</span></span></a>
+              <a class="btn" href="https://byeongjun-park.github.io/SteerX/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Project Page</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/teaser_steerx.jpg" width="720" height="364" alt="SteerX: Creating Any Camera-Free 3D and 4D Scenes with Geometric Steering" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-6">
+          <div><p>Recent progress in 3D/4D scene generation emphasizes the importance of physical alignment throughout video generation and scene reconstruction. However, existing methods improve the alignment separately at each stage, making it difficult to manage subtle misalignments arising from another stage. Here, we present SteerX, a zero-shot inference-time steering method that unifies scene reconstruction into the generation process, tilting data distributions toward better geometric alignment. To this end, we introduce two geometric reward functions for 3D/4D scene generation by using pose-free feed-forward scene reconstruction models. Through extensive experiments, we demonstrate the effectiveness of SteerX in improving 3D/4D scene generation.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="3d4d">
+        <div class="pub-body">
+          <h3 class="pub-title">SplatFlow: Multi-View Rectified Flow Model for 3D Gaussian Splatting Synthesis</h3>
+          <p class="pub-authors"><span class="au">Hyojun Go*</span>, <span class="au"><strong>Byeongjun Park*</strong></span>, <span class="au">Jiho Jang</span>, <span class="au">Jin-Young Kim</span>, <span class="au">Soonwoo Kwon</span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">CVPR 2025</span><span class="pub-cat">3D/4D Generation</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-7"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2411.16443" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/gohyojun15/SplatFlow/" target="_blank" rel="noopener" data-repo="gohyojun15/SplatFlow"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">147</span></span></a>
+              <a class="btn" href="https://gohyojun15.github.io/SplatFlow/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Project Page</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <video src="./assets/video/splatflow.mp4" poster="./assets/video/splatflow.jpg" width="640" height="400" muted loop playsinline preload="none" aria-label="SplatFlow: Multi-View Rectified Flow Model for 3D Gaussian Splatting Synthesis teaser video"></video>
+        </div>
+        <div class="pub-abstract" id="abs-7">
+          <div><p>Text-based generation and editing of 3D scenes hold significant potential for streamlining content creation through intuitive user interactions. While recent advances leverage 3D Gaussian Splatting (3DGS) for high-fidelity and real-time rendering, existing methods are often specialized and task-focused, lacking a unified framework for both generation and editing. In this paper, we introduce SplatFlow, a comprehensive framework that addresses this gap by enabling direct 3DGS generation and editing. SplatFlow comprises two main components: a multi-view rectified flow (RF) model and a Gaussian Splatting Decoder (GSDecoder). The multi-view RF model operates in latent space, generating multi-view images, depths, and camera poses simultaneously, conditioned on text prompts, thus addressing challenges like diverse scene scales and complex camera trajectories in real-world settings. Then, the GSDecoder efficiently translates these latent outputs into 3DGS representations through a feed-forward 3DGS method. Leveraging training-free inversion and inpainting techniques, SplatFlow enables seamless 3DGS editing and supports a broad range of 3D tasks-including object editing, novel view synthesis, and camera pose estimation-within a unified framework without requiring additional complex pipelines. We validate SplatFlow's capabilities on the MVImgNet and DL3DV-7K datasets, demonstrating its versatility and effectiveness in various 3D generation, editing, and inpainting-based tasks.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="diffusion">
+        <div class="pub-body">
+          <h3 class="pub-title">Diffusion Model Patching via Mixture-of-Prompts</h3>
+          <p class="pub-authors"><span class="au">Seokil Ham*</span>, <span class="au">Sangmin Woo*</span>, <span class="au">Jin-Young Kim</span>, <span class="au">Hyojun Go</span>, <span class="au"><strong>Byeongjun Park</strong></span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">AAAI 2025</span><span class="pub-cat">Diffusion Model Architecture</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-8"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2405.17825" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/sangminwoo/DMP" target="_blank" rel="noopener" data-repo="sangminwoo/DMP"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">14</span></span></a>
+              <a class="btn" href="https://sangminwoo.github.io/DMP/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Project Page</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/teaser_dmp.jpg" width="720" height="442" alt="Diffusion Model Patching via Mixture-of-Prompts" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-8">
+          <div><p>We present Diffusion Model Patching (DMP), a simple method to boost the performance of pre-trained diffusion models that have already reached convergence, with a negligible increase in parameters. DMP inserts a small, learnable set of prompts into the model's input space while keeping the original model frozen. The effectiveness of DMP is not merely due to the addition of parameters but stems from its dynamic gating mechanism, which selects and combines a subset of learnable prompts at every timestep (i.e., reverse denoising steps). This strategy, which we term "mixture-of-prompts", enables the model to draw on the distinct expertise of each prompt, essentially "patching" the model's functionality at every timestep with minimal yet specialized parameters. Uniquely, DMP enhances the model by further training on the original dataset already used for pre-training, even in a scenario where significant improvements are typically not expected due to model convergence. Notably, DMP significantly enhances the FID of converged DiT-L/2 by 10.38% on FFHQ, achieved with only a 1.43% parameter increase and 50K additional training iterations.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="other">
+        <div class="pub-body">
+          <h3 class="pub-title">Method and Apparatus with Scene Flow Estimation</h3>
+          <p class="pub-authors"><span class="au">Youngjun Kwak</span>, <span class="au">Taekyung Kim</span>, <span class="au">Changick Kim</span>, <span class="au"><strong>Byeongjun Park</strong></span>, <span class="au">Changbeom Park</span></p>
+          <p class="pub-meta"><span class="pub-venue">US Patent 2025</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-9"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://patents.google.com/patent/US12243243B2/en" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-certificate"/></svg>Patent</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/mono-sf.jpg" width="720" height="333" alt="Method and Apparatus with Scene Flow Estimation" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-9">
+          <div><p>A scene flow estimation method and apparatus are provided. The scene flow estimation method includes receiving a first feature pyramid and a second feature pyramid by encoding a first frame and a second frame of an input image through the same encoder, extracting a depth feature based on the first feature pyramid, extracting a motion feature based on the first feature pyramid and the second feature pyramid, generating an overall feature based on the depth feature and the motion feature, and estimating a scene flow based on the overall feature.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="3d4d">
+        <div class="pub-body">
+          <h3 class="pub-title">Bridging Implicit and Explicit Geometric Transformation for Single-Image View Synthesis</h3>
+          <p class="pub-authors"><span class="au"><strong>Byeongjun Park*</strong></span>, <span class="au">Hyojun Go*</span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">TPAMI 2024</span><span class="pub-cat">3D/4D Generation</span></p>
+            <p class="pub-note"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-award"/></svg>IF=20.8 (2024)</p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-10"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2209.07105" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/teaser_pami.jpg" width="720" height="442" alt="Bridging Implicit and Explicit Geometric Transformation for Single-Image View Synthesis" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-10">
+          <div><p>Creating novel views from a single image has achieved tremendous strides with advanced autoregressive models, as unseen regions have to be inferred from the visible scene contents. Although recent methods generate high-quality novel views, synthesizing with only one explicit or implicit 3D geometry has a trade-off between two objectives that we call the "seesaw" problem: 1) preserving reprojected contents and 2) completing realistic out-of-view regions. Also, autoregressive models require a considerable computational cost. In this paper, we propose a single-image view synthesis framework for mitigating the seesaw problem while utilizing an efficient non-autoregressive model. Motivated by the characteristics that explicit methods well preserve reprojected pixels and implicit methods complete realistic out-of-view regions, we introduce a loss function to complement two renderers. Our loss function promotes that explicit features improve the reprojected area of implicit features and implicit features improve the out-of-view area of explicit features. With the proposed architecture and loss function, we can alleviate the seesaw problem, outperforming autoregressive-based state-of-the-art methods and generating an image ≈100 times faster. We validate the efficiency and effectiveness of our method with experiments on RealEstate10K and ACID datasets.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="diffusion">
+        <div class="pub-body">
+          <h3 class="pub-title">Switch Diffusion Transformer: Synergizing Denoising Tasks with Sparse Mixture-of-Experts</h3>
+          <p class="pub-authors"><span class="au"><strong>Byeongjun Park</strong></span>, <span class="au">Hyojun Go</span>, <span class="au">Jin-Young Kim</span>, <span class="au">Sangmin Woo</span>, <span class="au">Seokil Ham</span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">ECCV 2024</span><span class="pub-cat">Diffusion Model Architecture</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-11"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2403.09176" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/byeongjun-park/Switch-DiT" target="_blank" rel="noopener" data-repo="byeongjun-park/Switch-DiT"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">49</span></span></a>
+              <a class="btn" href="https://byeongjun-park.github.io/Switch-DiT/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Project Page</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/teaser_switch.jpg" width="720" height="442" alt="Switch Diffusion Transformer: Synergizing Denoising Tasks with Sparse Mixture-of-Experts" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-11">
+          <div><p>Diffusion models have achieved remarkable success across a range of generative tasks. Recent efforts to enhance diffusion model architectures have reimagined them as a form of multi-task learning, where each task corresponds to a denoising task at a specific noise level. While these efforts have focused on parameter isolation and task routing, they fall short of capturing detailed inter-task relationships and risk losing semantic information, respectively. In response, we introduce Switch Diffusion Transformer (Switch-DiT), which establishes inter-task relationships between conflicting tasks without compromising semantic information. To achieve this, we employ a sparse mixture-of-experts within each transformer block to utilize semantic information and facilitate handling conflicts in tasks through parameter isolation. Additionally, we propose a diffusion prior loss, encouraging similar tasks to share their denoising paths while isolating conflicting ones. Through these, each transformer block contains a shared expert across all tasks, where the common and task-specific denoising paths enable the diffusion model to construct its beneficial way of synergizing denoising tasks. Extensive experiments validate the effectiveness of our approach in improving both image quality and convergence rate, and further analysis demonstrates that Switch-DiT constructs tailored denoising paths across various generation scenarios.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="3d4d">
+        <div class="pub-body">
+          <h3 class="pub-title">HarmonyView: Harmonizing Consistency and Diversity in One-Image-to-3D</h3>
+          <p class="pub-authors"><span class="au">Sangmin Woo*</span>, <span class="au"><strong>Byeongjun Park*</strong></span>, <span class="au">Hyojun Go</span>, <span class="au">Jin-Young Kim</span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">CVPR 2024</span><span class="pub-cat">3D/4D Generation</span></p>
+            <p class="pub-note"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-award"/></svg>Finalist, Qualcomm Innovation Fellowship 2024 Korea</p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-12"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2312.15980" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/byeongjun-park/HarmonyView" target="_blank" rel="noopener" data-repo="byeongjun-park/HarmonyView"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">133</span></span></a>
+              <a class="btn" href="https://byeongjun-park.github.io/HarmonyView/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Project Page</a>
+              <a class="btn" href="https://huggingface.co/spaces/byeongjun-park/HarmonyView" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-play"/></svg>Demo</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <video src="./assets/video/harmonyview.mp4" poster="./assets/video/harmonyview.jpg" width="640" height="400" muted loop playsinline preload="none" aria-label="HarmonyView: Harmonizing Consistency and Diversity in One-Image-to-3D teaser video"></video>
+        </div>
+        <div class="pub-abstract" id="abs-12">
+          <div><p>Recent progress in single-image 3D generation highlights the importance of multi-view coherency, leveraging 3D priors from large-scale diffusion models pretrained on Internet-scale images. However, the aspect of novel-view diversity remains underexplored within the research landscape due to the ambiguity in converting a 2D image into 3D content, where numerous potential shapes can emerge. Here, we aim to address this research gap by simultaneously addressing both consistency and diversity. Yet, striking a balance between these two aspects poses a considerable challenge due to their inherent trade-offs. This work introduces HarmonyView, a simple yet effective diffusion sampling technique adept at decomposing two intricate aspects in single-image 3D generation: consistency and diversity. This approach paves the way for a more nuanced exploration of the two critical dimensions within the sampling process. Moreover, we propose a new evaluation metric based on CLIP image and text encoders to comprehensively assess the diversity of the generated views, which closely aligns with human evaluators' judgments. In experiments, HarmonyView achieves a harmonious balance, demonstrating a win-win scenario in both consistency and diversity.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="diffusion">
+        <div class="pub-body">
+          <h3 class="pub-title">Denoising Task Routing for Diffusion Models</h3>
+          <p class="pub-authors"><span class="au"><strong>Byeongjun Park*</strong></span>, <span class="au">Sangmin Woo*</span>, <span class="au">Hyojun Go*</span>, <span class="au">Jin-Young Kim*</span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">ICLR 2024</span><span class="pub-cat">Diffusion Model Architecture</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-13"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2310.07138" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/byeongjun-park/DTR" target="_blank" rel="noopener" data-repo="byeongjun-park/DTR"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">26</span></span></a>
+              <a class="btn" href="https://byeongjun-park.github.io/DTR/" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Project Page</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/teaser_iclr.jpg" width="607" height="373" alt="Denoising Task Routing for Diffusion Models" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-13">
+          <div><p>Diffusion models generate highly realistic images by learning a multi-step denoising process, naturally embodying the principles of multi-task learning (MTL). Despite the inherent connection between diffusion models and MTL, there remains an unexplored area in designing neural architectures that explicitly incorporate MTL into the framework of diffusion models. In this paper, we present Denoising Task Routing (DTR), a simple add-on strategy for existing diffusion model architectures to establish distinct information pathways for individual tasks within a single architecture by selectively activating subsets of channels in the model. What makes DTR particularly compelling is its seamless integration of prior knowledge of denoising tasks into the framework: (1) Task Affinity: DTR activates similar channels for tasks at adjacent timesteps and shifts activated channels as sliding windows through timesteps, capitalizing on the inherent strong affinity between tasks at adjacent timesteps. (2) Task Weights: During the early stages (higher timesteps) of the denoising process, DTR assigns a greater number of task-specific channels, leveraging the insight that diffusion models prioritize reconstructing global structure and perceptually rich contents in earlier stages, and focus on simple noise removal in later stages. Our experiments reveal that DTR not only consistently boosts diffusion models' performance across different evaluation protocols without adding extra parameters but also accelerates training convergence. Finally, we show the complementarity between our architectural approach and existing MTL optimization techniques, providing a more complete view of MTL in the context of diffusion training. Significantly, by leveraging this complementarity, we attain matched performance of DiT-XL using the smaller DiT-L with a reduction in training iterations from 7M to 2M.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="other">
+        <div class="pub-body">
+          <h3 class="pub-title">Point-DynRF: Point-based Dynamic Radiance Fields from a Monocular Video</h3>
+          <p class="pub-authors"><span class="au"><strong>Byeongjun Park</strong></span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">WACV 2024</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-14"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2310.09647" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/teaser_wacv.jpg" width="548" height="337" alt="Point-DynRF: Point-based Dynamic Radiance Fields from a Monocular Video" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-14">
+          <div><p>Dynamic radiance fields have emerged as a promising approach for generating novel views from a monocular video. However, previous methods enforce the geometric consistency to dynamic radiance fields only between adjacent input frames, making it difficult to represent the global scene geometry and degenerates at the viewpoint that is spatio-temporally distant from the input camera trajectory. To solve this problem, we introduce point-based dynamic radiance fields (<strong>Point-DynRF</strong>), a novel framework where the global geometric information and the volume rendering process are trained by neural point clouds and dynamic radiance fields, respectively. Specifically, we reconstruct neural point clouds directly from geometric proxies and optimize both radiance fields and the geometric proxies using our proposed losses, allowing them to complement each other. We validate the effectiveness of our method with experiments on the NVIDIA Dynamic Scenes Dataset and several causally captured monocular video clips.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="other">
+        <div class="pub-body">
+          <h3 class="pub-title">Temporal Flow Mask Attention for Open-Set Long-Tailed Recognition of Wild Animals in Camera-Trap Images</h3>
+          <p class="pub-authors"><span class="au">Jeongsoo Kim</span>, <span class="au">Sangmin Woo</span>, <span class="au"><strong>Byeongjun Park</strong></span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">ICIP 2022</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-15"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://arxiv.org/abs/2208.14625" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/teaser_icip2022.jpg" width="720" height="463" alt="Temporal Flow Mask Attention for Open-Set Long-Tailed Recognition of Wild Animals in Camera-Trap Images" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-15">
+          <div><p>Camera traps, unmanned observation devices, and deep learning-based image recognition systems have greatly reduced human effort in collecting and analyzing wildlife images. However, data collected via above apparatus exhibits 1) long-tailed and 2) open-ended distribution problems. To tackle the open-set long-tailed recognition problem, we propose the Temporal Flow Mask Attention Network that comprises three key building blocks: 1) an optical flow module, 2) an attention residual module, and 3) a meta-embedding classifier. We extract temporal features of sequential frames using the optical flow module and learn informative representation using attention residual blocks. Moreover, we show that applying the meta-embedding technique boosts the performance of the method in open-set long-tailed recognition. We apply this method on a Korean Demilitarized Zone (DMZ) dataset. We conduct extensive experiments, and quantitative and qualitative analyses to prove that our method effectively tackles the open-set long-tailed recognition problem while being robust to unknown classes.</p></div>
+        </div>
+      </article>
+      <article class="pub" data-category="other">
+        <div class="pub-body">
+          <h3 class="pub-title">Fine-Grained Multi-Class Object Counting</h3>
+          <p class="pub-authors"><span class="au">Hyojun Go</span>, <span class="au">Junyoung Byun</span>, <span class="au"><strong>Byeongjun Park</strong></span>, <span class="au">Myung-Ae Choi</span>, <span class="au">Seunghwa Yoo</span>, <span class="au">Changick Kim</span></p>
+          <p class="pub-meta"><span class="pub-venue">ICIP 2021</span></p>
+          <div class="pub-links">
+              <button class="btn btn-abs" type="button" aria-expanded="false" aria-controls="abs-16"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-lines"/></svg>Abstract</button>
+              <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/9506384" target="_blank" rel="noopener"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-file-pdf"/></svg>Paper</a>
+              <a class="btn" href="https://github.com/gohyojun15/FINE-GRAINED-MULTI-CLASS-OBJECT-COUNTING" target="_blank" rel="noopener" data-repo="gohyojun15/FINE-GRAINED-MULTI-CLASS-OBJECT-COUNTING"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-github"/></svg>Code<span class="stars"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span class="star-count">2</span></span></a>
+          </div>
+        </div>
+        <div class="pub-media">
+          <img src="./assets/img/thumb/teaser_icip2021.jpg" width="200" height="123" alt="Fine-Grained Multi-Class Object Counting" loading="lazy">
+        </div>
+        <div class="pub-abstract" id="abs-16">
+          <div><p>Many animal species in the wild are at the risk of extinction. To deal with this situation, ecologists have monitored the population changes of endangered species. However, the current wildlife monitoring method is extremely laborious as the animals are counted manually. Automated counting of animals by species can facilitate this work and further renew the ways for ecological studies. However, to the best of our knowledge, few works and publicly available datasets have been proposed on multi-class object counting which is applicable to counting several animal species. In this paper, we propose a fine-grained multi-class object counting dataset, named KR-GRUIDAE, which contains endangered red-crowned crane and white-naped crane in the family Gruidae. We also propose a specialized network for multi-class object counting and line segment density maps, and show their effectiveness by comparing results of existing crowd counting methods on the KR-GRUIDAE dataset.</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experience & Education -->
+  <section id="experience" class="section">
+    <h2>Experience &amp; Education</h2>
+    <div class="two-col">
+      <div>
+        <h3 class="col-title"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-briefcase"/></svg>Experience</h3>
+        <ol class="timeline">
+          <li>
+            <span class="tl-period">Aug. 2025 – Present</span>
+            <span class="tl-role">AI Research Scientist <span class="muted">@ EverEx</span></span>
+            <span class="tl-note">Mandatory Military Service</span>
+          </li>
+          <li>
+            <span class="tl-period">Mar. 2018 – Aug. 2018</span>
+            <span class="tl-role">AI Research Intern <span class="muted">@ Koh Young Technology</span></span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h3 class="col-title"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-graduation-cap"/></svg>Education</h3>
+        <ol class="timeline">
+          <li>
+            <span class="tl-period">Mar. 2020 – Aug. 2025</span>
+            <span class="tl-role">Ph.D. in Electrical Engineering <span class="muted">@ KAIST</span></span>
+          </li>
+          <li>
+            <span class="tl-period">Mar. 2015 – Feb. 2020</span>
+            <span class="tl-role">B.S. in Electrical Engineering <span class="muted">@ KAIST</span></span>
+            <span class="tl-note">Graduated Cum Laude</span>
+          </li>
+          <li>
+            <span class="tl-period">Mar. 2013 – Feb. 2015</span>
+            <span class="tl-role">Gyeongnam Science High School</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honors & Services -->
+  <section id="honors" class="section">
+    <h2>Honors &amp; Services</h2>
+    <div class="honors-grid">
+      <div class="card">
+        <h3 class="col-title"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-trophy"/></svg>Awards</h3>
+        <ul class="plain">
+          <li><span>Finalist, Qualcomm Innovation Fellowship 2024 Korea</span><span class="muted small">Dec. 2024</span></li>
+          <li><span>Samsung Best Paper Award, IEIE Autumn Annual Conference</span><span class="muted small">Nov. 2021</span></li>
+          <li><span>National Academic Excellence Scholarship (Science and Engineering, Korea)</span><span class="muted small">2016, 2017, 2018</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="col-title"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-microphone"/></svg>Invited Talks</h3>
+        <ul class="plain">
+          <li><span>ETRI — Recent Trends in 3D Content Creation</span><span class="muted small">Aug. 2024</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="col-title"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-users"/></svg>Conference Reviewer</h3>
+        <div class="tag-row">
+          <span class="tag tag-static">SIGGRAPH <span class="muted">2026</span></span>
+          <span class="tag tag-static">CVPR <span class="muted">2026</span></span>
+          <span class="tag tag-static">ICCV <span class="muted">2025</span></span>
+          <span class="tag tag-static">ECCV <span class="muted">2024, 2026</span></span>
+          <span class="tag tag-static">ICML <span class="muted">2025</span></span>
+          <span class="tag tag-static">ICLR <span class="muted">2025, 2027</span></span>
+          <span class="tag tag-static">NeurIPS <span class="muted">2024, 2025</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="col-title"><svg class="ic" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#i-book-open"/></svg>Journal Reviewer</h3>
+        <ul class="plain">
+          <li><span>IEEE Transactions on Visualization and Computer Graphics</span><span class="muted small">2025</span></li>
+          <li><span>IEEE Transactions on Image Processing</span><span class="muted small">2025</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span class="js-year">2026</span> Byeongjun Park · Last updated <span class="js-updated">Nov 2026</span></p>
+  </footer>
+</main>
+
+  <script src="./assets/js/main.js?v=33fb0bf8"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5FERHL579"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H5FERHL579');
+  </script>
+</body>
+</html>
